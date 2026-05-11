@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přehrávač Článků (Floccus)</title>
+<style>
+  body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 20px; }
+  h1 { color: #00d4ff; border-bottom: 2px solid #00d4ff; padding-bottom: 8px; }
+  .playlist { list-style: none; padding: 0; }
+  .playlist li {
+    background: #16213e; padding: 12px 16px; margin-bottom: 10px; border-radius: 6px;
+    border-left: 4px solid #3a0ca3; display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.3s;
+  }
+  .playlist li.playing { background: #0f3460; border-left-color: #4ecca3; }
+  .info { flex-grow: 1; margin-right: 15px; }
+  .title { font-weight: bold; font-size: 1.1em; color: #fff; margin-bottom: 5px; }
+  .meta-info { font-size: 0.85em; color: #888; }
+  .meta-info a { color: #4ecca3; text-decoration: none; margin-left: 10px; }
+  .meta-info a:hover { text-decoration: underline; }
+  .controls button { background: #4361ee; color: white; border: none; padding: 8px 14px; border-radius: 4px; cursor: pointer; }
+  .controls button:hover { background: #3a0ca3; }
+  #playerContainer { position: sticky; top: 0; background: #1a1a2e; padding: 10px 0; z-index: 10; border-bottom: 1px solid #333; margin-bottom: 20px; }
+  audio { width: 100%; height: 40px; }
+  #nowPlaying { font-size: 0.9em; color: #a78bfa; margin-bottom: 8px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Přehrávač Článků</h1>
+<p><a href="index.html" style="color:#00d4ff;">&larr; Zpět na audioknihy</a></p>
+
+<div id="playerContainer">
+  <div id="nowPlaying">Nic nehraje</div>
+  <audio id="mainPlayer" controls></audio>
+</div>
+
+<ul class="playlist" id="playlist">
+
+  <li data-audio="audio/20260511_133305_Aljašský_fjord_zpustošila_druh.mp3">
+    <div class="info">
+      <div class="title">Aljašský fjord zpustošila druhá největší zaznamenaná megatsunami - Seznam Zprávy</div>
+      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-aljassky-fjord-zpustosila-druha-nejvetsi-zaznamenana-megatsunami-305711#source=hp&seq_no=1&dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">Původní článek</a></div>
+    </div>
+    <div class="controls">
+      <button class="play-btn">▶ Přehrát</button>
+    </div>
+  </li>
+
+  <li data-audio="audio/20260511_133259_Informace_o_řízení___Nahlížení.mp3">
+    <div class="info">
+      <div class="title">Informace o řízení | Nahlížení do katastru nemovitostí</div>
+      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://nahlizenidokn.cuzk.gov.cz/ZobrazObjekt.aspx?encrypted=NAHL~pFTxf6wFQzKCFBlDVqVtzGKt_MfpRVXci3mNaIpCKJeh4HDfU0pEZjLqFzw-OpZwIb3BGuXBA2sl8aeCXa7EKLUNubcieY-JHRZ2unPhZGpDOQ4caZJOoMduk7DfGXxTjb9TADeWqZXxNvc_jcSGneykKEPfCKmBE_FwnC0ToUtsJvsCOoum6qT1CBhRS6WGm3aUn1BJMN1pJ6JeCuOkmr7qpBygd9SsUGp8KUAfyJ4P8cCENJEtaZEibyqXsiIf" target="_blank">Původní článek</a></div>
+    </div>
+    <div class="controls">
+      <button class="play-btn">▶ Přehrát</button>
+    </div>
+  </li>
+
+</ul>
+<script>
+  const player = document.getElementById('mainPlayer');
+  const nowPlaying = document.getElementById('nowPlaying');
+  const playlistItems = document.querySelectorAll('.playlist li');
+  let currentIndex = -1;
+
+  function playItem(index) {
+    if (index < 0 || index >= playlistItems.length) return;
+    playlistItems.forEach(item => item.classList.remove('playing'));
+    
+    currentIndex = index;
+    const currentItem = playlistItems[currentIndex];
+    currentItem.classList.add('playing');
+    
+    const title = currentItem.querySelector('.title').textContent;
+    nowPlaying.textContent = "Nyní hraje: " + title;
+    
+    player.src = currentItem.getAttribute('data-audio');
+    player.play();
+  }
+
+  playlistItems.forEach((item, index) => {
+    const btn = item.querySelector('.play-btn');
+    if (btn) btn.addEventListener('click', () => playItem(index));
+  });
+
+  player.addEventListener('ended', () => {
+    playItem(currentIndex + 1); // Play next
+  });
+</script>
+</body>
+</html>

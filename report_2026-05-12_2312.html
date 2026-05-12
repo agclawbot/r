@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audioknihy Report</title>
+<style>
+  :root { --bg: #0f172a; --card-bg: #1e293b; --accent: #38bdf8; --text: #f8fafc; --text-muted: #94a3b8; --border: #334155; }
+  body { font-family: 'Inter', 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+  
+  /* Navbar */
+  .navbar { position: sticky; top: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 15px 20px; border-bottom: 1px solid var(--border); z-index: 100; display: flex; align-items: center; justify-content: space-between; }
+  .navbar h1 { margin: 0; font-size: 1.5rem; color: var(--accent); display: flex; align-items: center; gap: 10px; }
+  .nav-links { display: flex; gap: 15px; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; padding: 5px 10px; border-radius: 6px; background: var(--card-bg); }
+  .nav-links a:hover { color: var(--accent); background: #2dd4bf22; }
+  
+  /* Header Info */
+  .meta { color: var(--text-muted); font-size: 0.9rem; margin: 20px 0 30px; display: flex; gap: 20px; }
+  .meta span { background: var(--card-bg); padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); }
+  
+  /* Sections */
+  h2 { color: #f1f5f9; margin: 40px 0 20px; padding-top: 80px; margin-top: -60px; display: flex; align-items: center; gap: 10px; font-size: 1.8rem; }
+  .count { background: var(--accent); color: var(--bg); font-size: 0.9rem; padding: 2px 10px; border-radius: 12px; font-weight: bold; }
+  
+  /* Grid & Cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; }
+  .book { background: var(--card-bg); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+  .book:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.3); border-color: #475569; }
+  .book::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); }
+  .book.has-problems::before { background: #ef4444; }
+  
+  /* Content inside cards */
+  .cover { float: right; max-width: 100px; max-height: 140px; margin: 0 0 10px 15px; border-radius: 6px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+  .author { font-size: 0.9rem; display: flex; justify-content: space-between; color: var(--text-muted); }
+  .author a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .author a:hover { text-decoration: underline; }
+  .title { font-size: 1.15rem; font-weight: 700; color: #fff; line-height: 1.3; margin-right: 110px; }
+  .desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  
+  /* Tags & Meta */
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 5px; }
+  .genre { background: rgba(56, 189, 248, 0.1); color: var(--accent); border-radius: 6px; padding: 3px 10px; font-size: 0.8rem; font-weight: 500; }
+  .source-badge { background: #334155; color: #e2e8f0; border-radius: 6px; padding: 3px 10px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  
+  /* Downloads */
+  .downloads { margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; }
+  .download-item { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px; }
+  .download-item a { color: #a78bfa; font-size: 0.85rem; word-break: break-all; flex: 1; min-width: 200px; }
+  .btn-group { display: flex; gap: 6px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; gap: 5px; }
+  .copy-btn { background: #4f46e5; color: white; }
+  .copy-btn:hover { background: #4338ca; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  
+  /* Extras */
+  .password { color: #fbbf24; font-size: 0.85rem; font-family: monospace; background: rgba(251, 191, 36, 0.1); padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; }
+  .problems, .reply-problems { font-size: 0.85rem; padding: 6px 10px; border-radius: 6px; margin-top: 5px; }
+  .problems { background: rgba(239, 68, 68, 0.1); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.2); }
+  .reply-problems { background: rgba(245, 158, 11, 0.1); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.2); }
+  .preview { margin-top: 8px; font-size: 0.85rem; }
+  .preview a { color: #c084fc; }
+  .clearfix::after { content: ''; display: table; clear: both; }
+  .no-results { text-align: center; padding: 40px; color: var(--text-muted); font-size: 1.1rem; background: var(--card-bg); border-radius: 12px; border: 1px dashed var(--border); }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+</style>
+</head>
+<body>
+<div class="navbar">
+  <h1>🎧 Audioknihy Report</h1>
+  <div class="nav-links">
+    <a href="../">🏠 Archiv</a>
+    
+      
+      <a href="#sec-1">war-forum.net (4)</a>
+      
+    
+  </div>
+</div>
+
+<div class="container">
+  <div class="meta">
+    <span>⏱️ Vygenerováno: 12.05.2026 23:12</span>
+    <span>📅 Data od: 2026-05-11</span>
+  </div>
+
+  
+  <h2 id="sec-1">
+    war-forum.net <span class="count">4</span>
+  </h2>
+  
+  
+  <div class="grid">
+    
+  <div class="book clearfix ">
+    
+    
+    <div class="author">
+      <a href="https://war-forum.net/index.php?topic=1759736.0" target="_blank" title="Otevřít fórum">Kafka, Franz</a>
+      <span>2026-05-12 12:59</span>
+    </div>
+    
+    <div class="title">Kafka Franz - Topič 2017 (cz) CRo</div>
+    
+    <div class="tags">
+      <span class="source-badge">war-forum</span>
+      
+    </div>
+    
+    <div class="desc">Strach a uzkost z moderni doby jsou v Kafkove podani stale aktualni, tak jako v dobe vzniku tohoto romanu. Nezvestny, respektive Topic, ma, podobne jako cele Kafkovo dilo, zvlastni jemny humor, ktery prosvita skrze liceni podivnych netecnych vztahu a bizarnich prostredi. Účinkují Marek Adamczyk a An</div>
+    
+    
+    
+    <div class="downloads">
+      
+      
+      <div class="download-item">
+        <a href="https://webshare.cz/#/file/kpbhUfICYM/kavka-rar" target="_blank" title="https://webshare.cz/#/file/kpbhUfICYM/kavka-rar">https://webshare.cz/#/file/kpbhUfICYM/kavka-rar</a>
+        <div class="btn-group">
+          <button class="btn copy-btn" onclick="copyLink(this,'https://webshare.cz/#/file/kpbhUfICYM/kavka-rar')">📋 Kopírovat</button>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+    
+  <div class="book clearfix ">
+    
+    
+    <div class="author">
+      <a href="https://war-forum.net/index.php?topic=1530355.0" target="_blank" title="Otevřít fórum">Bellová Bianca - Jezero</a>
+      <span>2026-05-12 12:58</span>
+    </div>
+    
+    <div class="title">Bellova Bianca - Hrazny 2017 (cz)</div>
+    
+    <div class="tags">
+      <span class="source-badge">war-forum</span>
+      
+    </div>
+    
+    <div class="desc">Povidka soucasne ceske autorky o zivote v pohranicni vesnici, o samote, odevzdanosti i o lasce a touze po blizkosti.</div>
+    
+    
+    
+    <div class="downloads">
+      
+      
+      <div class="download-item">
+        <a href="https://webshare.cz/#/file/E4Iincsfvh/vanoce-rar" target="_blank" title="https://webshare.cz/#/file/E4Iincsfvh/vanoce-rar">https://webshare.cz/#/file/E4Iincsfvh/vanoce-rar</a>
+        <div class="btn-group">
+          <button class="btn copy-btn" onclick="copyLink(this,'https://webshare.cz/#/file/E4Iincsfvh/vanoce-rar')">📋 Kopírovat</button>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+    
+  <div class="book clearfix ">
+    <img class="cover" src="https://atkcdn.audioteka.com/cc/fd/dabelska-zubarka/41.jpg?w=300&auto=format" alt="cover" loading="lazy">
+    
+    <div class="author">
+      <a href="https://war-forum.net/index.php?topic=1759525.0" target="_blank" title="Otevřít fórum">Walliams, David</a>
+      <span>2026-05-11 22:14</span>
+    </div>
+    
+    <div class="title">Ďábelská zubařka</div>
+    
+    <div class="tags">
+      <span class="source-badge">war-forum</span>
+      
+    </div>
+    
+    <div class="desc">ZUBYRVOUCÍ ZTŘEŠTĚNÝ PŘÍBĚH, U KTERÉHO SE BUDETE BÁT! Výtečná audiokniha pro každého, kdo si nechce čistit zuby. Čeká vás morbidní, dojemný, smutný a zároveň nespoutaně vtipný příběh plný vymyšlených slov. Alfie má plnou pusu zka-žených zubů a panickou hrůzu ze zubaře. Do městečka se nastěhuje nová</div>
+    
+    
+    
+    <div class="downloads">
+      
+      
+      <div class="download-item">
+        <a href="https://webshare.cz/#/file/dniWGQmpH5" target="_blank" title="https://webshare.cz/#/file/dniWGQmpH5">https://webshare.cz/#/file/dniWGQmpH5</a>
+        <div class="btn-group">
+          <button class="btn copy-btn" onclick="copyLink(this,'https://webshare.cz/#/file/dniWGQmpH5')">📋 Kopírovat</button>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+    
+  <div class="book clearfix ">
+    <img class="cover" src="https://atkcdn.audioteka.com/cc/e1/bestie-z-buckinghamskeho-palace/28.jpg?w=300&auto=format" alt="cover" loading="lazy">
+    
+    <div class="author">
+      <a href="https://war-forum.net/index.php?topic=1759525.0" target="_blank" title="Otevřít fórum">Walliams, David</a>
+      <span>2026-05-11 22:16</span>
+    </div>
+    
+    <div class="title">Bestie z Buckinghamského paláce</div>
+    
+    <div class="tags">
+      <span class="source-badge">war-forum</span>
+      
+    </div>
+    
+    <div class="desc">Nová tlustá Walliamsovka je temná, dobrodružná, tajemná, pitvořivě legrační a odehrává se v Británii v roce 2120. Londýn je v troskách, lidé mají hlad a na celou zemi padla temnota. Malý princ Alfréd, neduživý knihomol, nikdy neopustil bezpečí Buckinghamského paláce. Teď se ale i v palácových zdech</div>
+    
+    
+    
+    <div class="downloads">
+      
+      
+      <div class="download-item">
+        <a href="https://webshare.cz/#/file/hnazgIJlTK" target="_blank" title="https://webshare.cz/#/file/hnazgIJlTK">https://webshare.cz/#/file/hnazgIJlTK</a>
+        <div class="btn-group">
+          <button class="btn copy-btn" onclick="copyLink(this,'https://webshare.cz/#/file/hnazgIJlTK')">📋 Kopírovat</button>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+    
+  </div>
+  
+  
+</div>
+
+<script>
+function copyLink(btn, url) {
+  navigator.clipboard.writeText(url).then(() => {
+    const oldHtml = btn.innerHTML;
+    btn.innerHTML = '✓ Zkopírováno';
+    btn.style.background = '#059669';
+    setTimeout(() => {
+      btn.innerHTML = oldHtml;
+      btn.style.background = '';
+    }, 2000);
+  }).catch(err => console.error('Copy failed: ', err));
+}
+</script>
+</body>
+</html>

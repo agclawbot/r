@@ -5,597 +5,626 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Přehrávač Článků (Floccus)</title>
 <style>
-  body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 20px; }
-  h1 { color: #00d4ff; border-bottom: 2px solid #00d4ff; padding-bottom: 8px; }
-  .playlist { list-style: none; padding: 0; }
+  :root { --bg: #0f172a; --card-bg: #1e293b; --accent: #38bdf8; --text: #f8fafc; --text-muted: #94a3b8; --border: #334155; --hover: #2dd4bf22; }
+  body { font-family: 'Inter', 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+  
+  .navbar { position: sticky; top: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 15px 20px; border-bottom: 1px solid var(--border); z-index: 100; display: flex; align-items: center; justify-content: space-between; }
+  .navbar h1 { margin: 0; font-size: 1.5rem; color: var(--accent); display: flex; align-items: center; gap: 10px; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 6px; background: var(--card-bg); transition: color 0.2s, background 0.2s; }
+  .nav-links a:hover { color: var(--accent); background: var(--hover); }
+
+  #playerContainer { position: sticky; top: 70px; background: var(--bg); padding: 15px 0 25px; z-index: 10; border-bottom: 1px dashed var(--border); margin-bottom: 30px; }
+  #nowPlaying { font-size: 1.1rem; color: #a78bfa; margin-bottom: 12px; font-weight: 600; text-align: center; }
+  audio { width: 100%; height: 44px; border-radius: 8px; outline: none; }
+  audio::-webkit-media-controls-panel { background-color: var(--card-bg); }
+  audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display { color: var(--text); }
+  
+  .playlist { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px; }
   .playlist li {
-    background: #16213e; padding: 12px 16px; margin-bottom: 10px; border-radius: 6px;
-    border-left: 4px solid #3a0ca3; display: flex; align-items: center; justify-content: space-between;
-    transition: background 0.3s;
+    background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid var(--border);
+    position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
   }
-  .playlist li.playing { background: #0f3460; border-left-color: #4ecca3; }
-  .info { flex-grow: 1; margin-right: 15px; }
-  .title { font-weight: bold; font-size: 1.1em; color: #fff; margin-bottom: 5px; }
-  .meta-info { font-size: 0.85em; color: #888; }
-  .meta-info a { color: #4ecca3; text-decoration: none; margin-left: 10px; }
-  .meta-info a:hover { text-decoration: underline; }
-  .controls button { background: #4361ee; color: white; border: none; padding: 8px 14px; border-radius: 4px; cursor: pointer; }
-  .controls button:hover { background: #3a0ca3; }
-  #playerContainer { position: sticky; top: 0; background: #1a1a2e; padding: 10px 0; z-index: 10; border-bottom: 1px solid #333; margin-bottom: 20px; }
-  audio { width: 100%; height: 40px; }
-  #nowPlaying { font-size: 0.9em; color: #a78bfa; margin-bottom: 8px; font-weight: bold; }
+  .playlist li::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #4f46e5; transition: background 0.3s; }
+  .playlist li:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); border-color: #475569; }
+  .playlist li.playing { background: #1e293b; border-color: #38bdf8; }
+  .playlist li.playing::before { background: var(--accent); }
+  
+  .info { flex-grow: 1; }
+  .title { font-weight: 700; font-size: 1.2rem; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+  .meta-info { font-size: 0.9rem; color: var(--text-muted); display: flex; gap: 15px; align-items: center; }
+  .meta-info a { color: #a78bfa; text-decoration: none; background: rgba(167, 139, 250, 0.1); padding: 2px 8px; border-radius: 4px; }
+  .meta-info a:hover { background: rgba(167, 139, 250, 0.2); }
+  
+  .controls button { background: #059669; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 0.2s, transform 0.1s; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+  .controls button:hover { background: #047857; transform: scale(1.02); }
+  .controls button:active { transform: scale(0.98); }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #64748b; }
 </style>
 </head>
 <body>
-<h1>Přehrávač Článků</h1>
-<p><a href="index.html" style="color:#00d4ff;">&larr; Zpět na audioknihy</a></p>
-
-<div id="playerContainer">
-  <div id="nowPlaying">Nic nehraje</div>
-  <audio id="mainPlayer" controls></audio>
+<div class="navbar">
+  <h1>📰 Přehrávač Článků (Floccus)</h1>
+  <div class="nav-links">
+    <a href="index.html">🏠 Zpět na audioknihy</a>
+  </div>
 </div>
 
-<ul class="playlist" id="playlist">
+<div class="container">
+  <div id="playerContainer">
+    <div id="nowPlaying">Nic nehraje</div>
+    <audio id="mainPlayer" controls></audio>
+  </div>
 
-  <li data-audio="audio/20260512_173029_Doprava__po_bydlení_největší_p.mp3">
-    <div class="info">
-      <div class="title">Doprava: po bydlení největší problém Pražanů, MHD chválí</div>
-      <div class="meta-info">Přidáno: 12.05.2026 <a href="https://www.novinky.cz/clanek/domaci-zpravy-hlavni-mesto-praha-doprava-je-po-bydleni-nejpalcivejsi-tema-mezi-prazany-jednou-z-priorit-je-dostavba-prazskeho-okruhu-40577650?utm_campaign=abtest308_feed_filter_varBB&utm_medium=z-boxiku&utm_source=www.seznam.cz#dop_ab_variant=0&dop_source_zone_name=hpfeed.sznhp.localbox" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+  <ul class="playlist" id="playlist">
 
-  <li data-audio="audio/20260512_170241_Libido_v_kómatu__duše_v_ráji__.mp3">
-    <div class="info">
-      <div class="title">Libido v kómatu, duše v ráji: Proč je šest let bez radovánek to nejlepší, co mě potkalo - Flowee</div>
-      <div class="meta-info">Přidáno: 12.05.2026 <a href="https://www.flowee.cz/sex-a-vztahy/16839-libido-v-komatu-duse-v-raji-proc-je-sest-let-bez-radovanek-to-nejlepsi-co-me-potkalo?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1645400&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260512_173029_Doprava__po_bydlení_největší_p.mp3">
+      <div class="info">
+        <div class="title">Doprava: po bydlení největší problém Pražanů, MHD chválí</div>
+        <div class="meta-info">📅 12.05.2026 <a href="https://www.novinky.cz/clanek/domaci-zpravy-hlavni-mesto-praha-doprava-je-po-bydleni-nejpalcivejsi-tema-mezi-prazany-jednou-z-priorit-je-dostavba-prazskeho-okruhu-40577650?utm_campaign=abtest308_feed_filter_varBB&utm_medium=z-boxiku&utm_source=www.seznam.cz#dop_ab_variant=0&dop_source_zone_name=hpfeed.sznhp.localbox" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260512_170029__Náckové_se_bavili_tím__že_stá.mp3">
-    <div class="info">
-      <div class="title">„Náckové se bavili tím, že stáli u metra a vybírali si oběti,“ říká autor knihy o antifě | REFRESHER.cz</div>
-      <div class="meta-info">Přidáno: 12.05.2026 <a href="https://refresher.cz/201872--Nackove-se-bavili-tim-ze-si-u-metra-vybirali-obeti-rika-autor-knihy-o-antife-squatingu-a-Palestine?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=0&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260512_170241_Libido_v_kómatu__duše_v_ráji__.mp3">
+      <div class="info">
+        <div class="title">Libido v kómatu, duše v ráji: Proč je šest let bez radovánek to nejlepší, co mě potkalo - Flowee</div>
+        <div class="meta-info">📅 12.05.2026 <a href="https://www.flowee.cz/sex-a-vztahy/16839-libido-v-komatu-duse-v-raji-proc-je-sest-let-bez-radovanek-to-nejlepsi-co-me-potkalo?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1645400&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260512_160059_Průzkum__Pražané_kritizují_dop.mp3">
-    <div class="info">
-      <div class="title">Průzkum: Pražané kritizují dopravní zácpy či parkování, s MHD jsou spokojeni — ČT24 — Česká televize</div>
-      <div class="meta-info">Přidáno: 12.05.2026 <a href="https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/pruzkum-prazane-kritizuji-dopravni-zacpy-ci-parkovani-s-mhd-jsou-spokojeni-373338?utm_campaign=abtest308_feed_filter_varBB&utm_medium=z-boxiku&utm_source=www.seznam.cz#dop_ab_variant=0&dop_source_zone_name=hpfeed.sznhp.localbox&dop_vert_ab=0&dop_vert_id=iloc1&dop_req_id=gBOyOF61Axg-202605121347&dop_id=273980237" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260512_170029__Náckové_se_bavili_tím__že_stá.mp3">
+      <div class="info">
+        <div class="title">„Náckové se bavili tím, že stáli u metra a vybírali si oběti,“ říká autor knihy o antifě | REFRESHER.cz</div>
+        <div class="meta-info">📅 12.05.2026 <a href="https://refresher.cz/201872--Nackove-se-bavili-tim-ze-si-u-metra-vybirali-obeti-rika-autor-knihy-o-antife-squatingu-a-Palestine?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=0&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260512_160039_Podvodníci_u_silnic_zastavují_.mp3">
-    <div class="info">
-      <div class="title">Podvodníci u silnic zastavují řidiče. Okradení lze předejít, jsou totiž poznat na první pohled</div>
-      <div class="meta-info">Přidáno: 12.05.2026 <a href="https://autosalon.tv/novinky/ridicuv-chleba/podvodnici-u-silnic-zastavuji-ridice-okradeni-lze-predejit-jsou-totiz-poznat-na-prvni-pohled?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260512_160059_Průzkum__Pražané_kritizují_dop.mp3">
+      <div class="info">
+        <div class="title">Průzkum: Pražané kritizují dopravní zácpy či parkování, s MHD jsou spokojeni — ČT24 — Česká televize</div>
+        <div class="meta-info">📅 12.05.2026 <a href="https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/pruzkum-prazane-kritizuji-dopravni-zacpy-ci-parkovani-s-mhd-jsou-spokojeni-373338?utm_campaign=abtest308_feed_filter_varBB&utm_medium=z-boxiku&utm_source=www.seznam.cz#dop_ab_variant=0&dop_source_zone_name=hpfeed.sznhp.localbox&dop_vert_ab=0&dop_vert_id=iloc1&dop_req_id=gBOyOF61Axg-202605121347&dop_id=273980237" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_180023_Přehrávač_Článků__Floccus_.mp3">
-    <div class="info">
-      <div class="title">Přehrávač Článků (Floccus)</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://agclawbot.github.io/audioknihy-reports/clanky.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260512_160039_Podvodníci_u_silnic_zastavují_.mp3">
+      <div class="info">
+        <div class="title">Podvodníci u silnic zastavují řidiče. Okradení lze předejít, jsou totiž poznat na první pohled</div>
+        <div class="meta-info">📅 12.05.2026 <a href="https://autosalon.tv/novinky/ridicuv-chleba/podvodnici-u-silnic-zastavuji-ridice-okradeni-lze-predejit-jsou-totiz-poznat-na-prvni-pohled?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_151020_Tribuna_Sever_se_vyjádřila_k_u.mp3">
-    <div class="info">
-      <div class="title">Tribuna Sever se vyjádřila k ukončenému derby. Nešlo to zastavit, tvrdí - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-tribuna-sever-se-vyjadrila-k-ukoncenemu-derby-neslo-to-zastavit-tvrdi-305917" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_180023_Přehrávač_Článků__Floccus_.mp3">
+      <div class="info">
+        <div class="title">Přehrávač Článků (Floccus)</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://agclawbot.github.io/audioknihy-reports/clanky.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_150208_Komentář__Už_toho_mám_dost__Zp.mp3">
-    <div class="info">
-      <div class="title">Komentář: Už toho mám dost. Zpomalovací prahy úplně zbytečně ničí naše auta</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://autosalon.tv/novinky/ridicuv-chleba/komentar-uz-toho-mam-dost-zpomalovaci-prahy-uplne-zbytecne-nici-nase-auta" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_151020_Tribuna_Sever_se_vyjádřila_k_u.mp3">
+      <div class="info">
+        <div class="title">Tribuna Sever se vyjádřila k ukončenému derby. Nešlo to zastavit, tvrdí - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-tribuna-sever-se-vyjadrila-k-ukoncenemu-derby-neslo-to-zastavit-tvrdi-305917" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_150127_Bitvu_s_AI_jsme_už_prohráli__ř.mp3">
-    <div class="info">
-      <div class="title">Bitvu s AI jsme už prohráli, říká Petr Mára. Proč hledá nudu? - CzechCrunch</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://cc.cz/bitvu-s-ai-jsme-uz-prohrali-rika-petr-mara-proc-vydelava-jen-par-hodin-tydne-a-proc-hleda-nudu/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_150208_Komentář__Už_toho_mám_dost__Zp.mp3">
+      <div class="info">
+        <div class="title">Komentář: Už toho mám dost. Zpomalovací prahy úplně zbytečně ničí naše auta</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://autosalon.tv/novinky/ridicuv-chleba/komentar-uz-toho-mam-dost-zpomalovaci-prahy-uplne-zbytecne-nici-nase-auta" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_150108_Katedrála__jak_ji_neznáte__Pra.mp3">
-    <div class="info">
-      <div class="title">Katedrála, jak ji neznáte. Pražská katedrála sv. Víta, Václava a Vojtěcha jako model světa a vesmíru | Vltava</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://vltava.rozhlas.cz/katedrala-jak-ji-neznate-prazska-katedrala-sv-vita-vaclava-a-vojtecha-jako-model-9614621" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_150127_Bitvu_s_AI_jsme_už_prohráli__ř.mp3">
+      <div class="info">
+        <div class="title">Bitvu s AI jsme už prohráli, říká Petr Mára. Proč hledá nudu? - CzechCrunch</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://cc.cz/bitvu-s-ai-jsme-uz-prohrali-rika-petr-mara-proc-vydelava-jen-par-hodin-tydne-a-proc-hleda-nudu/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_150045___Chimaev_po_prohře_oznámil_př.mp3">
-    <div class="info">
-      <div class="title">
+    <li data-audio="audio/20260511_150108_Katedrála__jak_ji_neznáte__Pra.mp3">
+      <div class="info">
+        <div class="title">Katedrála, jak ji neznáte. Pražská katedrála sv. Víta, Václava a Vojtěcha jako model světa a vesmíru | Vltava</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://vltava.rozhlas.cz/katedrala-jak-ji-neznate-prazska-katedrala-sv-vita-vaclava-a-vojtecha-jako-model-9614621" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
+
+    <li data-audio="audio/20260511_150045___Chimaev_po_prohře_oznámil_př.mp3">
+      <div class="info">
+        <div class="title">
 	Chimaev po prohře oznámil přestup do polo-těžké váhy a hned se mu ozval vyzyvatel - MMA Shorties
 </div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://mmashorties.cz/chimaev-po-prohre-oznamil-prestup-do-polo-tezke-vahy-a-hned-se-mu-ozval-vyzyvatel/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+        <div class="meta-info">📅 11.05.2026 <a href="https://mmashorties.cz/chimaev-po-prohre-oznamil-prestup-do-polo-tezke-vahy-a-hned-se-mu-ozval-vyzyvatel/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_150007_Kdo_selhal_při_derby__Policie_.mp3">
-    <div class="info">
-      <div class="title">Kdo selhal při derby? Policie čekala na pokyn, Slavia nevolala - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-kdo-selhal-pri-derby-policie-cekala-na-pokyn-slavia-nevolala-305853" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_150007_Kdo_selhal_při_derby__Policie_.mp3">
+      <div class="info">
+        <div class="title">Kdo selhal při derby? Policie čekala na pokyn, Slavia nevolala - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-kdo-selhal-pri-derby-policie-cekala-na-pokyn-slavia-nevolala-305853" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145953_Lidl_testuje_online_prodej_pot.mp3">
-    <div class="info">
-      <div class="title">Lidl testuje online prodej potravin. Po letech váhání začal prodávat přes aplikaci | Peníze.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.penize.cz/nakupy/489422-lidl-testuje-online-prodej-potravin-po-letech-vahani-zacal-prodavat-pres-aplikaci" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145953_Lidl_testuje_online_prodej_pot.mp3">
+      <div class="info">
+        <div class="title">Lidl testuje online prodej potravin. Po letech váhání začal prodávat přes aplikaci | Peníze.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.penize.cz/nakupy/489422-lidl-testuje-online-prodej-potravin-po-letech-vahani-zacal-prodavat-pres-aplikaci" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145951_Slábnutí_mořských_proudů_v_Atl.mp3">
-    <div class="info">
-      <div class="title">Slábnutí mořských proudů v Atlantiku může přinést do Evropy nečekaně kruté zimy – VTM.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://vtm.zive.cz/clanky/slabnuti-morskych-proudu-v-atlantiku-muze-prinest-do-evropy-necekane-krute-zimy/sc-870-a-241064/default.aspx" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145951_Slábnutí_mořských_proudů_v_Atl.mp3">
+      <div class="info">
+        <div class="title">Slábnutí mořských proudů v Atlantiku může přinést do Evropy nečekaně kruté zimy – VTM.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://vtm.zive.cz/clanky/slabnuti-morskych-proudu-v-atlantiku-muze-prinest-do-evropy-necekane-krute-zimy/sc-870-a-241064/default.aspx" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145938___Letiště_varuje_před_kolonami.mp3">
-    <div class="info">
-      <div class="title">
+    <li data-audio="audio/20260511_145938___Letiště_varuje_před_kolonami.mp3">
+      <div class="info">
+        <div class="title">
 	Letiště varuje před kolonami. Doporučuje rezervu i několik hodin | PrahaIN
 </div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.prahain.cz/doprava/letiste-varuje-pred-kolonami-doporucuje-rezervu-i-nekolik-hodin-27232.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.prahain.cz/doprava/letiste-varuje-pred-kolonami-doporucuje-rezervu-i-nekolik-hodin-27232.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145817_Strojvedoucí_Alexandra_Horká__.mp3">
-    <div class="info">
-      <div class="title">Strojvedoucí Alexandra Horká: Stále mě překvapuje chování řidičů na železničních přejezdech - Novinky</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.novinky.cz/clanek/lifestyle-osobnosti-strojvedouci-alexandra-horka-stale-me-prekvapuje-chovani-ridicu-na-zeleznicnich-prejezdech-40575450" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145817_Strojvedoucí_Alexandra_Horká__.mp3">
+      <div class="info">
+        <div class="title">Strojvedoucí Alexandra Horká: Stále mě překvapuje chování řidičů na železničních přejezdech - Novinky</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.novinky.cz/clanek/lifestyle-osobnosti-strojvedouci-alexandra-horka-stale-me-prekvapuje-chovani-ridicu-na-zeleznicnich-prejezdech-40575450" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145724__Obchodník_se_smrtí__získal_pr.mp3">
-    <div class="info">
-      <div class="title">„Obchodník se smrtí“ získal pro Pákistán atomovku. Byla to investice století - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-obchodnik-se-smrti-ziskal-pro-pakistan-atomovku-byla-to-investice-stoleti-305360" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145724__Obchodník_se_smrtí__získal_pr.mp3">
+      <div class="info">
+        <div class="title">„Obchodník se smrtí“ získal pro Pákistán atomovku. Byla to investice století - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-obchodnik-se-smrti-ziskal-pro-pakistan-atomovku-byla-to-investice-stoleti-305360" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145719_Sparta_se_vyjadřuje_k_derby__V.mp3">
-    <div class="info">
-      <div class="title">Sparta se vyjadřuje k derby: Vyvrcholení budované nenávisti vůči našemu klubu! Zmiňuje i Deliho - Sport.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.sport.cz/clanek/fotbal-ceska-1-liga-sparta-reaguje-na-derby-vyvrcholeni-budovane-nenavisti-vuci-nasemu-klubu-zminuje-i-deliho-5451440" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145719_Sparta_se_vyjadřuje_k_derby__V.mp3">
+      <div class="info">
+        <div class="title">Sparta se vyjadřuje k derby: Vyvrcholení budované nenávisti vůči našemu klubu! Zmiňuje i Deliho - Sport.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.sport.cz/clanek/fotbal-ceska-1-liga-sparta-reaguje-na-derby-vyvrcholeni-budovane-nenavisti-vuci-nasemu-klubu-zminuje-i-deliho-5451440" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145702_Zahrada__pana_Kouzelníka__na_B.mp3">
-    <div class="info">
-      <div class="title">Zahrada „pana Kouzelníka“ na Břevnově se otevírá - CzechCrunch</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://cc.cz/zahrada-pana-kouzelnika-se-otevira-vila-na-brevnove-chysta-i-sousedske-akce-nebo-komunitni-bar/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145702_Zahrada__pana_Kouzelníka__na_B.mp3">
+      <div class="info">
+        <div class="title">Zahrada „pana Kouzelníka“ na Břevnově se otevírá - CzechCrunch</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://cc.cz/zahrada-pana-kouzelnika-se-otevira-vila-na-brevnove-chysta-i-sousedske-akce-nebo-komunitni-bar/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145637_Smrkové_výhonky__jarní_poklad_.mp3">
-    <div class="info">
-      <div class="title">Smrkové výhonky: jarní poklad z lesa prospívá dýchání i imunitě. Vyzkoušejte sirup, med nebo sušené výhonky – Žena.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://zena.aktualne.cz/zdravi/smrkove-vyhonky-jarni-poklad-z-lesa-prospiva-dychani-i-imunite-vyzkousejte-sirup-med-nebo-susene-vyhonky" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145637_Smrkové_výhonky__jarní_poklad_.mp3">
+      <div class="info">
+        <div class="title">Smrkové výhonky: jarní poklad z lesa prospívá dýchání i imunitě. Vyzkoušejte sirup, med nebo sušené výhonky – Žena.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://zena.aktualne.cz/zdravi/smrkove-vyhonky-jarni-poklad-z-lesa-prospiva-dychani-i-imunite-vyzkousejte-sirup-med-nebo-susene-vyhonky" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145635_Trump_oznámil_třídenní_příměří.mp3">
-    <div class="info">
-      <div class="title">Trump oznámil třídenní příměří ve válce Ruska proti Ukrajině - Novinky</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.novinky.cz/clanek/valka-na-ukrajine-trump-oznamil-tridenni-primeri-ve-valce-ruska-proti-ukrajine-40577299" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145635_Trump_oznámil_třídenní_příměří.mp3">
+      <div class="info">
+        <div class="title">Trump oznámil třídenní příměří ve válce Ruska proti Ukrajině - Novinky</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.novinky.cz/clanek/valka-na-ukrajine-trump-oznamil-tridenni-primeri-ve-valce-ruska-proti-ukrajine-40577299" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145615_Nejdřív_tankuj__až_pak_jez__Be.mp3">
-    <div class="info">
-      <div class="title">Nejdřív tankuj, až pak jez! Benzínky blokují řidiči, co si v klidu dávají párky - Deník.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.denik.cz/zivot-ridice/parkari-na-benzinkach-labuznici-nebo-sobecti-ridici-co-zdrzuji-provoz-20270505.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145615_Nejdřív_tankuj__až_pak_jez__Be.mp3">
+      <div class="info">
+        <div class="title">Nejdřív tankuj, až pak jez! Benzínky blokují řidiči, co si v klidu dávají párky - Deník.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.denik.cz/zivot-ridice/parkari-na-benzinkach-labuznici-nebo-sobecti-ridici-co-zdrzuji-provoz-20270505.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145548_Chorý_a_Douděra_ve_Slavii_konč.mp3">
-    <div class="info">
-      <div class="title">Chorý a Douděra ve Slavii končí. Po derby přetekla trpělivost s raubířem - Deník.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.denik.cz/fotbal-zajimavosti/derby-slavia-sparta-tomas-chory-david-doudera-vylouceni-fanousci-vytrznosti.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145548_Chorý_a_Douděra_ve_Slavii_konč.mp3">
+      <div class="info">
+        <div class="title">Chorý a Douděra ve Slavii končí. Po derby přetekla trpělivost s raubířem - Deník.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.denik.cz/fotbal-zajimavosti/derby-slavia-sparta-tomas-chory-david-doudera-vylouceni-fanousci-vytrznosti.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145547__Z_Prahy_nikdo_odejít_nechce__.mp3">
-    <div class="info">
-      <div class="title">„Z Prahy nikdo odejít nechce.“ Lidé jsou se životem ve městě spokojení, trápí je ale bydlení i horka — Deník N</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://denikn.cz/2054954/z-prahy-nikdo-odejit-nechce-lide-jsou-se-zivotem-ve-meste-spokojeni-trapi-je-ale-bydleni-i-horka/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145547__Z_Prahy_nikdo_odejít_nechce__.mp3">
+      <div class="info">
+        <div class="title">„Z Prahy nikdo odejít nechce.“ Lidé jsou se životem ve městě spokojení, trápí je ale bydlení i horka — Deník N</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://denikn.cz/2054954/z-prahy-nikdo-odejit-nechce-lide-jsou-se-zivotem-ve-meste-spokojeni-trapi-je-ale-bydleni-i-horka/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145516_Politik_hnutí_ANO_spolupracuje.mp3">
-    <div class="info">
-      <div class="title">Politik hnutí ANO spolupracuje se sektou, která šíří ruské narativy - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-kauzy-cesky-politik-pustil-proruskou-sektu-do-europarlamentu-nevidi-v-tom-problem-303421#dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&source=hp&seq_no=1&utm_campaign=abtest308_feed_filter_varBB&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145516_Politik_hnutí_ANO_spolupracuje.mp3">
+      <div class="info">
+        <div class="title">Politik hnutí ANO spolupracuje se sektou, která šíří ruské narativy - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-kauzy-cesky-politik-pustil-proruskou-sektu-do-europarlamentu-nevidi-v-tom-problem-303421#dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&source=hp&seq_no=1&utm_campaign=abtest308_feed_filter_varBB&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145413_Pochodovali_jen_vojáci_KLDR__k.mp3">
-    <div class="info">
-      <div class="title">Pochodovali jen vojáci KLDR, klid zajistil Trump: Putinova nejskromnější přehlídka vyvolala rozpaky - Techzpravy.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.techzpravy.cz/pochodovali-jen-vojaci-kldr-klid-zajistil-trump-putinova-nejskromnejsi-prehlidka-vyvolala-rozpaky/?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145413_Pochodovali_jen_vojáci_KLDR__k.mp3">
+      <div class="info">
+        <div class="title">Pochodovali jen vojáci KLDR, klid zajistil Trump: Putinova nejskromnější přehlídka vyvolala rozpaky - Techzpravy.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.techzpravy.cz/pochodovali-jen-vojaci-kldr-klid-zajistil-trump-putinova-nejskromnejsi-prehlidka-vyvolala-rozpaky/?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145340_Developeři_budou_smět_lidem_bo.mp3">
-    <div class="info">
-      <div class="title">Developeři budou smět lidem bourat domy. Bránit se bude takřka nemožné - Dřevostavitel.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.drevostavitel.cz/clanek/developeri-budou-moct-bourat?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145340_Developeři_budou_smět_lidem_bo.mp3">
+      <div class="info">
+        <div class="title">Developeři budou smět lidem bourat domy. Bránit se bude takřka nemožné - Dřevostavitel.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.drevostavitel.cz/clanek/developeri-budou-moct-bourat?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145331_Přísný_Procházka_zkritizoval_S.mp3">
-    <div class="info">
-      <div class="title">Přísný Procházka zkritizoval Stricklanda s Chimaevem</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.fights.cz/ufc/prisny-prochazka-zkritizoval-stricklanda-s-chimaevem-651385?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145331_Přísný_Procházka_zkritizoval_S.mp3">
+      <div class="info">
+        <div class="title">Přísný Procházka zkritizoval Stricklanda s Chimaevem</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.fights.cz/ufc/prisny-prochazka-zkritizoval-stricklanda-s-chimaevem-651385?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145253_Nechci_s_ním_být__Ale_nesnesu_.mp3">
-    <div class="info">
-      <div class="title">Nechci s ním být. Ale nesnesu, že je šťastný s jinou - Novinky</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.novinky.cz/clanek/lifestyle-sex-vztahy-nechci-s-nim-byt-ale-nesnesu-ze-je-stastny-s-jinou-40576847#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box&utm_source=www.seznam.cz&utm_medium=sekce-z-internetu" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145253_Nechci_s_ním_být__Ale_nesnesu_.mp3">
+      <div class="info">
+        <div class="title">Nechci s ním být. Ale nesnesu, že je šťastný s jinou - Novinky</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.novinky.cz/clanek/lifestyle-sex-vztahy-nechci-s-nim-byt-ale-nesnesu-ze-je-stastny-s-jinou-40576847#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box&utm_source=www.seznam.cz&utm_medium=sekce-z-internetu" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145220_Osmnáct_měsíců_žila_jako_muž__.mp3">
-    <div class="info">
-      <div class="title">Osmnáct měsíců žila jako muž: Experiment novinářky Norah Vincent skončil psychickým kolapsem – Poznatsvět.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.poznatsvet.cz/kultura-a-umeni/osmnact-mesicu-zila-jako-muz-experiment-novinarky-norah-vincent-skoncil-psychickym-kolapsem/?seznam-hp=1&utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145220_Osmnáct_měsíců_žila_jako_muž__.mp3">
+      <div class="info">
+        <div class="title">Osmnáct měsíců žila jako muž: Experiment novinářky Norah Vincent skončil psychickým kolapsem – Poznatsvět.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.poznatsvet.cz/kultura-a-umeni/osmnact-mesicu-zila-jako-muz-experiment-novinarky-norah-vincent-skoncil-psychickym-kolapsem/?seznam-hp=1&utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145201_Klíčem_k_odvrácení_útoku_psa_j.mp3">
-    <div class="info">
-      <div class="title">Klíčem k odvrácení útoku psa je podle odborníků klidné vystupování, pevný postoj a nulový oční kontakt – Poznatsvět.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.poznatsvet.cz/kultura-a-umeni/pes-napadeni-obrana/?seznam-hp=1&utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145201_Klíčem_k_odvrácení_útoku_psa_j.mp3">
+      <div class="info">
+        <div class="title">Klíčem k odvrácení útoku psa je podle odborníků klidné vystupování, pevný postoj a nulový oční kontakt – Poznatsvět.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.poznatsvet.cz/kultura-a-umeni/pes-napadeni-obrana/?seznam-hp=1&utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145129_Jak_si_doma_vytvořit_rychlou_z.mp3">
-    <div class="info">
-      <div class="title">Jak si doma vytvořit rychlou zónu a mít byt uklizený téměř bez námahy | HOME</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://homebydleni.cz/bydleni/design-interieru/jeste-doma-nepraktikujete-rychlou-zonu-vizualni-chaos-vas-vycerpava-vic-nez-spinava-podlaha/?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1&dop_source_zone_name=hpfeed.sznhp.context" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145129_Jak_si_doma_vytvořit_rychlou_z.mp3">
+      <div class="info">
+        <div class="title">Jak si doma vytvořit rychlou zónu a mít byt uklizený téměř bez námahy | HOME</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://homebydleni.cz/bydleni/design-interieru/jeste-doma-nepraktikujete-rychlou-zonu-vizualni-chaos-vas-vycerpava-vic-nez-spinava-podlaha/?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1&dop_source_zone_name=hpfeed.sznhp.context" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145112_Nový_trend_na_sociálních_sítíc.mp3">
-    <div class="info">
-      <div class="title">Nový trend na sociálních sítích. Němci nechávají svůj domov „říhnout“, u nás se to přitom dělá už dávno</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.marianne.cz/zivotni-styl/novy-trend-na-socialnich-sitich-nemci-nechavaji-svuj-domov-rihnout-u-nas-se-pritom?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145112_Nový_trend_na_sociálních_sítíc.mp3">
+      <div class="info">
+        <div class="title">Nový trend na sociálních sítích. Němci nechávají svůj domov „říhnout“, u nás se to přitom dělá už dávno</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.marianne.cz/zivotni-styl/novy-trend-na-socialnich-sitich-nemci-nechavaji-svuj-domov-rihnout-u-nas-se-pritom?utm_source=www.seznam.cz&utm_medium=sekce-z-internetu#dop_ab_variant=1667490&dop_source_zone_name=hpfeed.sznhp.box" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145102_Všechna_lehátka_byla_zabraná_r.mp3">
-    <div class="info">
-      <div class="title">Všechna lehátka byla zabraná ručníky. Německý turista vysoudil odškodnění - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-vsechna-lehatka-byla-zabrana-rucniky-nemecky-turista-vysoudil-odskodneni-305676#dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&source=hp&seq_no=4&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145102_Všechna_lehátka_byla_zabraná_r.mp3">
+      <div class="info">
+        <div class="title">Všechna lehátka byla zabraná ručníky. Německý turista vysoudil odškodnění - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-vsechna-lehatka-byla-zabrana-rucniky-nemecky-turista-vysoudil-odskodneni-305676#dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&source=hp&seq_no=4&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_145016__Putinovo_tiché_přiznání_nesch.mp3">
-    <div class="info">
-      <div class="title">„Putinovo tiché přiznání neschopnosti.“ Z velkolepých oslav zbyde zlomek - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-nespokojeni-rusove-i-obavy-z-utoku-ukrajiny-nad-putinovou-oslavou-visi-stin-305644#dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&source=hp&seq_no=2&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_145016__Putinovo_tiché_přiznání_nesch.mp3">
+      <div class="info">
+        <div class="title">„Putinovo tiché přiznání neschopnosti.“ Z velkolepých oslav zbyde zlomek - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-nespokojeni-rusove-i-obavy-z-utoku-ukrajiny-nad-putinovou-oslavou-visi-stin-305644#dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&source=hp&seq_no=2&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144936_Aljašský_fjord_zpustošila_druh.mp3">
-    <div class="info">
-      <div class="title">Aljašský fjord zpustošila druhá největší zaznamenaná megatsunami - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-aljassky-fjord-zpustosila-druha-nejvetsi-zaznamenana-megatsunami-305711#source=hp&seq_no=1&dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144936_Aljašský_fjord_zpustošila_druh.mp3">
+      <div class="info">
+        <div class="title">Aljašský fjord zpustošila druhá největší zaznamenaná megatsunami - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-aljassky-fjord-zpustosila-druha-nejvetsi-zaznamenana-megatsunami-305711#source=hp&seq_no=1&dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144426_Komentář__Už_toho_mám_dost__Zp.mp3">
-    <div class="info">
-      <div class="title">Komentář: Už toho mám dost. Zpomalovací prahy úplně zbytečně ničí naše auta</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://autosalon.tv/novinky/ridicuv-chleba/komentar-uz-toho-mam-dost-zpomalovaci-prahy-uplne-zbytecne-nici-nase-auta" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144426_Komentář__Už_toho_mám_dost__Zp.mp3">
+      <div class="info">
+        <div class="title">Komentář: Už toho mám dost. Zpomalovací prahy úplně zbytečně ničí naše auta</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://autosalon.tv/novinky/ridicuv-chleba/komentar-uz-toho-mam-dost-zpomalovaci-prahy-uplne-zbytecne-nici-nase-auta" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144337_Bitvu_s_AI_jsme_už_prohráli__ř.mp3">
-    <div class="info">
-      <div class="title">Bitvu s AI jsme už prohráli, říká Petr Mára. Proč hledá nudu? - CzechCrunch</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://cc.cz/bitvu-s-ai-jsme-uz-prohrali-rika-petr-mara-proc-vydelava-jen-par-hodin-tydne-a-proc-hleda-nudu/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144337_Bitvu_s_AI_jsme_už_prohráli__ř.mp3">
+      <div class="info">
+        <div class="title">Bitvu s AI jsme už prohráli, říká Petr Mára. Proč hledá nudu? - CzechCrunch</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://cc.cz/bitvu-s-ai-jsme-uz-prohrali-rika-petr-mara-proc-vydelava-jen-par-hodin-tydne-a-proc-hleda-nudu/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144306_Katedrála__jak_ji_neznáte__Pra.mp3">
-    <div class="info">
-      <div class="title">Katedrála, jak ji neznáte. Pražská katedrála sv. Víta, Václava a Vojtěcha jako model světa a vesmíru | Vltava</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://vltava.rozhlas.cz/katedrala-jak-ji-neznate-prazska-katedrala-sv-vita-vaclava-a-vojtecha-jako-model-9614621" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144306_Katedrála__jak_ji_neznáte__Pra.mp3">
+      <div class="info">
+        <div class="title">Katedrála, jak ji neznáte. Pražská katedrála sv. Víta, Václava a Vojtěcha jako model světa a vesmíru | Vltava</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://vltava.rozhlas.cz/katedrala-jak-ji-neznate-prazska-katedrala-sv-vita-vaclava-a-vojtecha-jako-model-9614621" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144252___Chimaev_po_prohře_oznámil_př.mp3">
-    <div class="info">
-      <div class="title">
+    <li data-audio="audio/20260511_144252___Chimaev_po_prohře_oznámil_př.mp3">
+      <div class="info">
+        <div class="title">
 	Chimaev po prohře oznámil přestup do polo-těžké váhy a hned se mu ozval vyzyvatel - MMA Shorties
 </div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://mmashorties.cz/chimaev-po-prohre-oznamil-prestup-do-polo-tezke-vahy-a-hned-se-mu-ozval-vyzyvatel/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+        <div class="meta-info">📅 11.05.2026 <a href="https://mmashorties.cz/chimaev-po-prohre-oznamil-prestup-do-polo-tezke-vahy-a-hned-se-mu-ozval-vyzyvatel/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144206_Kdo_selhal_při_derby__Policie_.mp3">
-    <div class="info">
-      <div class="title">Kdo selhal při derby? Policie čekala na pokyn, Slavia nevolala - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-kdo-selhal-pri-derby-policie-cekala-na-pokyn-slavia-nevolala-305853" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144206_Kdo_selhal_při_derby__Policie_.mp3">
+      <div class="info">
+        <div class="title">Kdo selhal při derby? Policie čekala na pokyn, Slavia nevolala - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-kdo-selhal-pri-derby-policie-cekala-na-pokyn-slavia-nevolala-305853" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144147_Lidl_testuje_online_prodej_pot.mp3">
-    <div class="info">
-      <div class="title">Lidl testuje online prodej potravin. Po letech váhání začal prodávat přes aplikaci | Peníze.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.penize.cz/nakupy/489422-lidl-testuje-online-prodej-potravin-po-letech-vahani-zacal-prodavat-pres-aplikaci" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144147_Lidl_testuje_online_prodej_pot.mp3">
+      <div class="info">
+        <div class="title">Lidl testuje online prodej potravin. Po letech váhání začal prodávat přes aplikaci | Peníze.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.penize.cz/nakupy/489422-lidl-testuje-online-prodej-potravin-po-letech-vahani-zacal-prodavat-pres-aplikaci" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144130_Slábnutí_mořských_proudů_v_Atl.mp3">
-    <div class="info">
-      <div class="title">Slábnutí mořských proudů v Atlantiku může přinést do Evropy nečekaně kruté zimy – VTM.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://vtm.zive.cz/clanky/slabnuti-morskych-proudu-v-atlantiku-muze-prinest-do-evropy-necekane-krute-zimy/sc-870-a-241064/default.aspx" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144130_Slábnutí_mořských_proudů_v_Atl.mp3">
+      <div class="info">
+        <div class="title">Slábnutí mořských proudů v Atlantiku může přinést do Evropy nečekaně kruté zimy – VTM.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://vtm.zive.cz/clanky/slabnuti-morskych-proudu-v-atlantiku-muze-prinest-do-evropy-necekane-krute-zimy/sc-870-a-241064/default.aspx" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144115___Letiště_varuje_před_kolonami.mp3">
-    <div class="info">
-      <div class="title">
+    <li data-audio="audio/20260511_144115___Letiště_varuje_před_kolonami.mp3">
+      <div class="info">
+        <div class="title">
 	Letiště varuje před kolonami. Doporučuje rezervu i několik hodin | PrahaIN
 </div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.prahain.cz/doprava/letiste-varuje-pred-kolonami-doporucuje-rezervu-i-nekolik-hodin-27232.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.prahain.cz/doprava/letiste-varuje-pred-kolonami-doporucuje-rezervu-i-nekolik-hodin-27232.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_144013_Strojvedoucí_Alexandra_Horká__.mp3">
-    <div class="info">
-      <div class="title">Strojvedoucí Alexandra Horká: Stále mě překvapuje chování řidičů na železničních přejezdech - Novinky</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.novinky.cz/clanek/lifestyle-osobnosti-strojvedouci-alexandra-horka-stale-me-prekvapuje-chovani-ridicu-na-zeleznicnich-prejezdech-40575450" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_144013_Strojvedoucí_Alexandra_Horká__.mp3">
+      <div class="info">
+        <div class="title">Strojvedoucí Alexandra Horká: Stále mě překvapuje chování řidičů na železničních přejezdech - Novinky</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.novinky.cz/clanek/lifestyle-osobnosti-strojvedouci-alexandra-horka-stale-me-prekvapuje-chovani-ridicu-na-zeleznicnich-prejezdech-40575450" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143803__Obchodník_se_smrtí__získal_pr.mp3">
-    <div class="info">
-      <div class="title">„Obchodník se smrtí“ získal pro Pákistán atomovku. Byla to investice století - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-obchodnik-se-smrti-ziskal-pro-pakistan-atomovku-byla-to-investice-stoleti-305360" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143803__Obchodník_se_smrtí__získal_pr.mp3">
+      <div class="info">
+        <div class="title">„Obchodník se smrtí“ získal pro Pákistán atomovku. Byla to investice století - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-obchodnik-se-smrti-ziskal-pro-pakistan-atomovku-byla-to-investice-stoleti-305360" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143734_Sparta_se_vyjadřuje_k_derby__V.mp3">
-    <div class="info">
-      <div class="title">Sparta se vyjadřuje k derby: Vyvrcholení budované nenávisti vůči našemu klubu! Zmiňuje i Deliho - Sport.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.sport.cz/clanek/fotbal-ceska-1-liga-sparta-reaguje-na-derby-vyvrcholeni-budovane-nenavisti-vuci-nasemu-klubu-zminuje-i-deliho-5451440" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143734_Sparta_se_vyjadřuje_k_derby__V.mp3">
+      <div class="info">
+        <div class="title">Sparta se vyjadřuje k derby: Vyvrcholení budované nenávisti vůči našemu klubu! Zmiňuje i Deliho - Sport.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.sport.cz/clanek/fotbal-ceska-1-liga-sparta-reaguje-na-derby-vyvrcholeni-budovane-nenavisti-vuci-nasemu-klubu-zminuje-i-deliho-5451440" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143703_Zahrada__pana_Kouzelníka__na_B.mp3">
-    <div class="info">
-      <div class="title">Zahrada „pana Kouzelníka“ na Břevnově se otevírá - CzechCrunch</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://cc.cz/zahrada-pana-kouzelnika-se-otevira-vila-na-brevnove-chysta-i-sousedske-akce-nebo-komunitni-bar/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143703_Zahrada__pana_Kouzelníka__na_B.mp3">
+      <div class="info">
+        <div class="title">Zahrada „pana Kouzelníka“ na Břevnově se otevírá - CzechCrunch</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://cc.cz/zahrada-pana-kouzelnika-se-otevira-vila-na-brevnove-chysta-i-sousedske-akce-nebo-komunitni-bar/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143637_Smrkové_výhonky__jarní_poklad_.mp3">
-    <div class="info">
-      <div class="title">Smrkové výhonky: jarní poklad z lesa prospívá dýchání i imunitě. Vyzkoušejte sirup, med nebo sušené výhonky – Žena.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://zena.aktualne.cz/zdravi/smrkove-vyhonky-jarni-poklad-z-lesa-prospiva-dychani-i-imunite-vyzkousejte-sirup-med-nebo-susene-vyhonky" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143637_Smrkové_výhonky__jarní_poklad_.mp3">
+      <div class="info">
+        <div class="title">Smrkové výhonky: jarní poklad z lesa prospívá dýchání i imunitě. Vyzkoušejte sirup, med nebo sušené výhonky – Žena.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://zena.aktualne.cz/zdravi/smrkove-vyhonky-jarni-poklad-z-lesa-prospiva-dychani-i-imunite-vyzkousejte-sirup-med-nebo-susene-vyhonky" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143615_Trump_oznámil_třídenní_příměří.mp3">
-    <div class="info">
-      <div class="title">Trump oznámil třídenní příměří ve válce Ruska proti Ukrajině - Novinky</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.novinky.cz/clanek/valka-na-ukrajine-trump-oznamil-tridenni-primeri-ve-valce-ruska-proti-ukrajine-40577299" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143615_Trump_oznámil_třídenní_příměří.mp3">
+      <div class="info">
+        <div class="title">Trump oznámil třídenní příměří ve válce Ruska proti Ukrajině - Novinky</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.novinky.cz/clanek/valka-na-ukrajine-trump-oznamil-tridenni-primeri-ve-valce-ruska-proti-ukrajine-40577299" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143553_Nejdřív_tankuj__až_pak_jez__Be.mp3">
-    <div class="info">
-      <div class="title">Nejdřív tankuj, až pak jez! Benzínky blokují řidiči, co si v klidu dávají párky - Deník.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.denik.cz/zivot-ridice/parkari-na-benzinkach-labuznici-nebo-sobecti-ridici-co-zdrzuji-provoz-20270505.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143553_Nejdřív_tankuj__až_pak_jez__Be.mp3">
+      <div class="info">
+        <div class="title">Nejdřív tankuj, až pak jez! Benzínky blokují řidiči, co si v klidu dávají párky - Deník.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.denik.cz/zivot-ridice/parkari-na-benzinkach-labuznici-nebo-sobecti-ridici-co-zdrzuji-provoz-20270505.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143521_Chorý_a_Douděra_ve_Slavii_konč.mp3">
-    <div class="info">
-      <div class="title">Chorý a Douděra ve Slavii končí. Po derby přetekla trpělivost s raubířem - Deník.cz</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.denik.cz/fotbal-zajimavosti/derby-slavia-sparta-tomas-chory-david-doudera-vylouceni-fanousci-vytrznosti.html" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143521_Chorý_a_Douděra_ve_Slavii_konč.mp3">
+      <div class="info">
+        <div class="title">Chorý a Douděra ve Slavii končí. Po derby přetekla trpělivost s raubířem - Deník.cz</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.denik.cz/fotbal-zajimavosti/derby-slavia-sparta-tomas-chory-david-doudera-vylouceni-fanousci-vytrznosti.html" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_143514__Z_Prahy_nikdo_odejít_nechce__.mp3">
-    <div class="info">
-      <div class="title">„Z Prahy nikdo odejít nechce.“ Lidé jsou se životem ve městě spokojení, trápí je ale bydlení i horka — Deník N</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://denikn.cz/2054954/z-prahy-nikdo-odejit-nechce-lide-jsou-se-zivotem-ve-meste-spokojeni-trapi-je-ale-bydleni-i-horka/" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_143514__Z_Prahy_nikdo_odejít_nechce__.mp3">
+      <div class="info">
+        <div class="title">„Z Prahy nikdo odejít nechce.“ Lidé jsou se životem ve městě spokojení, trápí je ale bydlení i horka — Deník N</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://denikn.cz/2054954/z-prahy-nikdo-odejit-nechce-lide-jsou-se-zivotem-ve-meste-spokojeni-trapi-je-ale-bydleni-i-horka/" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_133305_Aljašský_fjord_zpustošila_druh.mp3">
-    <div class="info">
-      <div class="title">Aljašský fjord zpustošila druhá největší zaznamenaná megatsunami - Seznam Zprávy</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-aljassky-fjord-zpustosila-druha-nejvetsi-zaznamenana-megatsunami-305711#source=hp&seq_no=1&dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_133305_Aljašský_fjord_zpustošila_druh.mp3">
+      <div class="info">
+        <div class="title">Aljašský fjord zpustošila druhá největší zaznamenaná megatsunami - Seznam Zprávy</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://www.seznamzpravy.cz/clanek/zahranicni-aljassky-fjord-zpustosila-druha-nejvetsi-zaznamenana-megatsunami-305711#source=hp&seq_no=1&dop_ab_variant=0&dop_source_zone_name=zpravy.sznhp.box&utm_campaign=&utm_medium=z-boxiku&utm_source=www.seznam.cz" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-  <li data-audio="audio/20260511_133259_Informace_o_řízení___Nahlížení.mp3">
-    <div class="info">
-      <div class="title">Informace o řízení | Nahlížení do katastru nemovitostí</div>
-      <div class="meta-info">Přidáno: 11.05.2026 <a href="https://nahlizenidokn.cuzk.gov.cz/ZobrazObjekt.aspx?encrypted=NAHL~pFTxf6wFQzKCFBlDVqVtzGKt_MfpRVXci3mNaIpCKJeh4HDfU0pEZjLqFzw-OpZwIb3BGuXBA2sl8aeCXa7EKLUNubcieY-JHRZ2unPhZGpDOQ4caZJOoMduk7DfGXxTjb9TADeWqZXxNvc_jcSGneykKEPfCKmBE_FwnC0ToUtsJvsCOoum6qT1CBhRS6WGm3aUn1BJMN1pJ6JeCuOkmr7qpBygd9SsUGp8KUAfyJ4P8cCENJEtaZEibyqXsiIf" target="_blank">Původní článek</a></div>
-    </div>
-    <div class="controls">
-      <button class="play-btn">▶ Přehrát</button>
-    </div>
-  </li>
+    <li data-audio="audio/20260511_133259_Informace_o_řízení___Nahlížení.mp3">
+      <div class="info">
+        <div class="title">Informace o řízení | Nahlížení do katastru nemovitostí</div>
+        <div class="meta-info">📅 11.05.2026 <a href="https://nahlizenidokn.cuzk.gov.cz/ZobrazObjekt.aspx?encrypted=NAHL~pFTxf6wFQzKCFBlDVqVtzGKt_MfpRVXci3mNaIpCKJeh4HDfU0pEZjLqFzw-OpZwIb3BGuXBA2sl8aeCXa7EKLUNubcieY-JHRZ2unPhZGpDOQ4caZJOoMduk7DfGXxTjb9TADeWqZXxNvc_jcSGneykKEPfCKmBE_FwnC0ToUtsJvsCOoum6qT1CBhRS6WGm3aUn1BJMN1pJ6JeCuOkmr7qpBygd9SsUGp8KUAfyJ4P8cCENJEtaZEibyqXsiIf" target="_blank">🔗 Původní text</a></div>
+      </div>
+      <div class="controls">
+        <button class="play-btn">▶ Přehrát</button>
+      </div>
+    </li>
 
-</ul>
+  </ul>
+</div>
+
 <script>
   const player = document.getElementById('mainPlayer');
   const nowPlaying = document.getElementById('nowPlaying');
@@ -604,14 +633,21 @@
 
   function playItem(index) {
     if (index < 0 || index >= playlistItems.length) return;
-    playlistItems.forEach(item => item.classList.remove('playing'));
+    playlistItems.forEach(item => {
+      item.classList.remove('playing');
+      const btn = item.querySelector('.play-btn');
+      if (btn) btn.innerHTML = '▶ Přehrát';
+    });
     
     currentIndex = index;
     const currentItem = playlistItems[currentIndex];
     currentItem.classList.add('playing');
     
     const title = currentItem.querySelector('.title').textContent;
-    nowPlaying.textContent = "Nyní hraje: " + title;
+    nowPlaying.textContent = "🎧 Nyní hraje: " + title;
+    
+    const playBtn = currentItem.querySelector('.play-btn');
+    if (playBtn) playBtn.innerHTML = '⏸ Přehrává se';
     
     player.src = currentItem.getAttribute('data-audio');
     player.play();
@@ -619,11 +655,21 @@
 
   playlistItems.forEach((item, index) => {
     const btn = item.querySelector('.play-btn');
-    if (btn) btn.addEventListener('click', () => playItem(index));
+    if (btn) btn.addEventListener('click', () => {
+      if (currentIndex === index && !player.paused) {
+        player.pause();
+        btn.innerHTML = '▶ Pokračovat';
+      } else if (currentIndex === index && player.paused) {
+        player.play();
+        btn.innerHTML = '⏸ Přehrává se';
+      } else {
+        playItem(index);
+      }
+    });
   });
 
   player.addEventListener('ended', () => {
-    playItem(currentIndex + 1); // Play next
+    playItem(currentIndex + 1); // Play next automatically
   });
 </script>
 </body>

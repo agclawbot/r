@@ -39,7 +39,12 @@
   
   .controls button { background: #059669; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 0.2s, transform 0.1s; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
   .controls button:hover { background: #047857; transform: scale(1.02); }
+  
   .controls button:active { transform: scale(0.98); }
+  
+  .player-controls { margin-top: 10px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+  .player-controls select { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); padding: 5px 10px; border-radius: 5px; font-size: 1rem; }
+
   
   /* Scrollbar */
   ::-webkit-scrollbar { width: 8px; }
@@ -57,10 +62,23 @@
 </div>
 
 <div class="container">
+  
   <div id="playerContainer">
     <div id="nowPlaying">Nic nehraje</div>
     <audio id="mainPlayer" controls></audio>
+    <div class="player-controls">
+      <label for="speedControl">Rychlost: </label>
+      <select id="speedControl">
+        <option value="0.75">0.75x</option>
+        <option value="1.0" selected>1.0x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="1.75">1.75x</option>
+        <option value="2.0">2.0x</option>
+      </select>
+    </div>
   </div>
+
 
   <ul class="playlist" id="playlist">
 
@@ -876,10 +894,16 @@
 </div>
 
 <script>
+
   const player = document.getElementById('mainPlayer');
   const nowPlaying = document.getElementById('nowPlaying');
   const playlistItems = document.querySelectorAll('.playlist li');
+  const speedControl = document.getElementById('speedControl');
   let currentIndex = -1;
+
+  speedControl.addEventListener('change', (e) => {
+    player.playbackRate = parseFloat(e.target.value);
+  });
 
   function playItem(index) {
     if (index < 0 || index >= playlistItems.length) return;
@@ -900,7 +924,19 @@
     if (playBtn) playBtn.innerHTML = '⏸ Přehrává se';
     
     player.src = currentItem.getAttribute('data-audio');
+    player.playbackRate = parseFloat(speedControl.value); // set speed
     player.play();
+    
+    // Media Session API for background playing on mobile
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: title,
+        artist: 'Floccus Články',
+        album: 'Floccus',
+      });
+      navigator.mediaSession.setActionHandler('previoustrack', () => playItem(currentIndex - 1));
+      navigator.mediaSession.setActionHandler('nexttrack', () => playItem(currentIndex + 1));
+    }
   }
 
   playlistItems.forEach((item, index) => {
@@ -919,8 +955,10 @@
   });
 
   player.addEventListener('ended', () => {
-    playItem(currentIndex + 1); // Play next automatically
+    // Hrát další článek automaticky (v seznamu je další index, i když je to historicky starší)
+    playItem(currentIndex + 1);
   });
+
 </script>
 </body>
 </html>

@@ -1,5 +1,22 @@
 [
   {
+    "author": "Bryndza Robert",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1655034",
+    "title": "Reupload =",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-05-12 19:14",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/R4LNgrZVXl/rb-01-dvl-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "chybí heslo",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
     "author": "Kafka, Franz",
     "topic_url": "https://war-forum.net/index.php?topic=1759736.0",
     "title": "Kafka Franz - Topič 2017 (cz) CRo",
@@ -9,40 +26,6 @@
     "image_url": "",
     "download_urls": [
       "https://webshare.cz/#/file/kpbhUfICYM/kavka-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Bellová Bianca - Jezero",
-    "topic_url": "https://war-forum.net/index.php?topic=1530355.0",
-    "title": "Bellova Bianca - Spinava zalezitost 2019 (cz)",
-    "description": "Povidku jako pripominku utoku na Sindzar v anglictine napsala a pro rozhlas do cestiny prelozila autorka. Pripravila Klara Fleyberkova.",
-    "genre": "",
-    "post_date": "2026-04-05 18:14",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/vdcRIdDo8N/trapas-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Bellová Bianca - Jezero",
-    "topic_url": "https://war-forum.net/index.php?topic=1530355.0",
-    "title": "Bellová Bianca - Nevšední portrét indiánského mladíka 2025 (cz)",
-    "description": "Příběh o tajemném obrazu a několika zmizelých ženách Povídka Nevšední portrét indiánského mladíka vyšla v antologii Po stopách zločinů",
-    "genre": "",
-    "post_date": "2026-04-22 13:35",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/zJpogcyqw0/esej-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -68,108 +51,15 @@
     "is_new": true
   },
   {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Babička drsňačka #1 - Babička drsňačka",
-    "description": "Ben je k smrti otrávený, zase má strávit víkend u babičky: „Vždyť je s ní děsná nuda! Se všema starýma je nuda. Telka jí nefunguje, pořád chce jenom hrát scrabble a smrdí kapustou!“ Pěkně tvrdý odsudek z úst nezletilce, jenže to ještě Ben netuší dvě věci: 1) Jeho babička kdysi byla proslulou lupičko",
-    "genre": "Literatura světová, Humor, Pro děti a mládež",
-    "post_date": "2026-05-07 15:39",
-    "image_url": "https://i.postimg.cc/FKyh3RfP/Audiokniha-Babicka-drsnacka-David-Walliams.jpg",
+    "author": "Giesbert, Franz-Olivier",
+    "topic_url": "https://war-forum.net/index.php?topic=1759690.0",
+    "title": "Ďáblova čísla",
+    "description": "Při běžné úřední cestě královského písaře Jiřího Adama z Dobronína do Dvora Králové dojde ve městě k vraždě. I když se radnice snaží utajit její okolnosti, mezi lidmi se rychle šíří panika, protože okolnosti napovídají, že jde o zásah temných sil. A tak navzdory tomu, že to není jeho povinnost, začn",
+    "genre": "Detektivky",
+    "post_date": "2026-05-12 09:51",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/118/11873/1/500/Audiokniha-Dablova-cisla-Vlastimil-Vondruska.avif",
     "download_urls": [
-      "https://webshare.cz/#/file/477Zfs6DAE",
-      "https://webshare.cz/#/file/9SX19V1K1O",
-      "https://webshare.cz/#/file/A4SbAwckYS",
-      "https://webshare.cz/#/file/PkyAWjEgrL",
-      "https://webshare.cz/#/file/PxF4KkqyTC"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "David Walliams - Půlnoční gang",
-    "description": "Půlnoc je doba, kdy všechny děti tvrdě spí, samozřejmě až na... Půlnoční gang! Držte si berle, jízda začíná! Dobrodružství čeká někdy tam, kde bychom ho nejméně čekali. A pobyt v nemocnici se může změnit v supertajnou misi! Nevěříte? Tom si to taky nemyslel. Pak ale dostal na tělocviku ránu kriketov",
-    "genre": "Literatura světová, Humor, Pro děti a mládež",
-    "post_date": "2026-05-08 05:33",
-    "image_url": "https://i.postimg.cc/BnPQTHtB/Audiokniha-Pulnocni-gang-David-Walliams.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/DpOiJuGyiv",
-      "https://webshare.cz/#/file/O9WXC4VF7t",
-      "https://webshare.cz/#/file/iRyzeye6Zh",
-      "https://webshare.cz/#/file/T0cW9uip1U",
-      "https://webshare.cz/#/file/rtCA97cq5s"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Něfo",
-    "description": "K popukání zábavný, poněkud tajuplný příběh o neuvěřitelně laskavých rodičích a jejich děsivě příšerné dceři napsal fenomenální David Walliams a načetl nepřekonatelný Jiří Lábus. Myrta má všechno, na co si vzpomene. Jenže mít všechno jí pořád ještě není dost. Její rodiče, manželé Marcel a Miriam Mír",
-    "genre": "",
-    "post_date": "2026-05-09 07:49",
-    "image_url": "https://atkcdn.audioteka.com/cc/8f/nefo/66.jpg?w=300&auto=format",
-    "download_urls": [
-      "https://webshare.cz/#/file/PQO5TvzmjT"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Ledová obluda",
-    "description": "VŠICHNI JÍ ŘÍKALI OBLUDA, ALE PRO MĚ BYLA KAMARÁDKA Malá Elsie žije v Londýně roku 1899, kde to sirotci jako ona rozhodně nemají jednoduché. Během protloukání se v šedivých ulicích viktoriánské metropole však její život projasní novinka, že do místního Přírodovědného muzea přivezou dokonale zachovan",
-    "genre": "",
-    "post_date": "2026-05-09 07:54",
-    "image_url": "https://www.o2knihovna.cz/generated/covers/90/ab2-3c019b73-317d-4c1e-b7d0-29949a930cae-360-905f.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/E5Wal0BN3l"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Krysburger",
-    "description": "DĚSIVĚ ZÁBAVNÁ KRYSOKNIHA Jak je u Walliamse obvyklé, nemají to jeho hrdinové v životě zrovna snadné. Ani Zoe není výjimkou. Další vřískavě vtipná, akční a dojemná audiokniha Davida Walliamse je tady. S malou Zoe to nevypadá dobře. Když zjistí, že její křeček zemřel, je zničená. S macechou, která ji",
-    "genre": "",
-    "post_date": "2026-05-09 07:59",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/139/13970/1/500/Audiokniha-Krysburger-David-Walliams.avif",
-    "download_urls": [
-      "https://webshare.cz/#/file/lynARN5AD8"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Ďábelská zubařka",
-    "description": "ZUBYRVOUCÍ ZTŘEŠTĚNÝ PŘÍBĚH, U KTERÉHO SE BUDETE BÁT! Výtečná audiokniha pro každého, kdo si nechce čistit zuby. Čeká vás morbidní, dojemný, smutný a zároveň nespoutaně vtipný příběh plný vymyšlených slov. Alfie má plnou pusu zka-žených zubů a panickou hrůzu ze zubaře. Do městečka se nastěhuje nová",
-    "genre": "",
-    "post_date": "2026-05-11 22:14",
-    "image_url": "https://atkcdn.audioteka.com/cc/fd/dabelska-zubarka/41.jpg?w=300&auto=format",
-    "download_urls": [
-      "https://webshare.cz/#/file/dniWGQmpH5"
+      "https://webshare.cz/#/file/Eafb7GhfH7/vndvlmdblvcsl-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -197,166 +87,13 @@
   {
     "author": "Walliams, David",
     "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Mezi tiárou a orlicí II",
-    "description": "Ve druhém díle sledujeme mocenský vzestup knížete Vratislava II, jeho střety s ambiciozním polským knížetem i papežem až ke přelomové korunovaci Dramatický příběh z druhé poloviny 11. století vypráví na základě dochovaných historických pramenů o dlouhém a pohnutém životě krále Vratislava I. Ve druhé",
+    "title": "Ďábelská zubařka",
+    "description": "ZUBYRVOUCÍ ZTŘEŠTĚNÝ PŘÍBĚH, U KTERÉHO SE BUDETE BÁT! Výtečná audiokniha pro každého, kdo si nechce čistit zuby. Čeká vás morbidní, dojemný, smutný a zároveň nespoutaně vtipný příběh plný vymyšlených slov. Alfie má plnou pusu zka-žených zubů a panickou hrůzu ze zubaře. Do městečka se nastěhuje nová",
     "genre": "",
-    "post_date": "2026-04-29 11:52",
-    "image_url": "https://static.audioteka.com/cz/images/products/vlastimil-vondruska/mezi-tiarou-a-orlici-ii-duze.jpg",
+    "post_date": "2026-05-11 22:14",
+    "image_url": "https://atkcdn.audioteka.com/cc/fd/dabelska-zubarka/41.jpg?w=300&auto=format",
     "download_urls": [
-      "https://webshare.cz/#/file/7k50oBkRJI/vlmvndmzitiruaorlii-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "VZPOURA GOLIARDŮ",
-    "description": "Píše se rok 1261. Přemysl II. Otakar podpoří v boji o trůn římského krále proti Alfonsi Kastilskému jeho konkurenta Richarda Cornwalského a za to má slíben majestát, propůjčující mu rakouské a štýrské léno. Jenže v diplomacii není nic takové, jak by se mohlo na první pohled zdát. Oldřich z Chlumu od",
-    "genre": "",
-    "post_date": "2026-05-01 08:05",
-    "image_url": "https://atkcdn.audioteka.com/cc/4d/vzpoura-goliardu/27.jpg?w=300&auto=format",
-    "download_urls": [
-      "https://webshare.cz/#/file/WlrBTFaTN8/vndrvlmlvzpglrd-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "KRÁLŮV DLUH",
-    "description": "Píše se rok 1266 a český král Přemysl II. Otakar podporuje slabého císaře Richarda Cornwallského. Za to obdrží úřad, který spravuje císařovo jmění na východ od Rýna, a vzápětí se s jeho tichým souhlasem zmocní Chebska. Tamní měšťané s tím nesouhlasí, ale nemají sílu, aby tomu zabránili.",
-    "genre": "",
-    "post_date": "2026-05-01 08:24",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/52/5234/3/500/Audiokniha-Kraluv-dluh-Vlastimil-Vondruska.avif",
-    "download_urls": [
-      "https://webshare.cz/#/file/sqebgoIQjO/vndvlmlkrlvdlh16-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "PODIVNÁ SVATBA NA LICHNICI",
-    "description": "Série Hříšní lidé Království českého 15. Příběh z detektivního cyklu Hříšní lidé Království českého. Při ústupu českého vojska z Bavorska se dostane v Mühldorfu zadní voj do obležení. V něm bojuje i Oldřich z Chlumu. Rytířům se podaří probojovat na svobodu, ale i když by měli slavit, jejich velitelé",
-    "genre": "",
-    "post_date": "2026-05-01 08:38",
-    "image_url": "https://static.audioteka.com/cz/images/products/vlastimil-vondruska/podivna-svatba-na-lichnici-duze.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/hPwm7PToCB/vlmvndpdvstbnalchci2016-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "JÁCHYMOVŠTÍ DÉMONI",
-    "description": "Letopisy královské komory 18. Mladý rytíř Jiří Adam z Dobronína se stane písařem Královské komory a jeho úkolem je dohlížet na pořádek v Údolí svatého Jáchyma, kde se podařilo nalézt stříbro. Do nové osady se stahují horníci z druhé strany hor a s nimi přicházejí lidé, kteří tu hledají obživu, někte",
-    "genre": "Detektivky",
-    "post_date": "2026-05-01 09:04",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/52/5219/2/500/Audiokniha-Jachymovsti-demoni-Vlastimil-Vondruska.avif",
-    "download_urls": [
-      "https://webshare.cz/#/file/g8eZd8Yx5K/vndvlmljchmdmni-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Případ masopustních maškar",
-    "description": "Historik a oblíbený spisovatel Vlastimil Vondruška píše mimo jiné čtivé, dramatické a tajuplné detektivní příběhy, které se odehrávají ve středověku. U čtenářů si získaly obrovský ohlas pro svou věrohodnost, atmosféru, rychlý spád děje a napětí. Mnoho z nich spojuje postava vzdělaného a čestného ryt",
-    "genre": "",
-    "post_date": "2026-05-01 09:46",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/9/920/7/500/Audiokniha-Pripad-masopustnich-maskar-Vlastimil-Vondruska.avif",
-    "download_urls": [
-      "https://webshare.cz/#/file/5qayQo9CUa/vndvlmprpmspstmskr-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Záhada zlaté štoly",
-    "description": "Další z příběhů královského prokurátora Oldřicha z Chlumu se tentokrát odehrává v okolí Prahy. Nevysvětlitelným způsobem se při cestě z královských dolů v Jílovém u Prahy ztratí truhlice plná zlata. Král Přemysl I. Otakar povolá Oldřicha z Chlumu, protože je jasné, že v pozadí musí stát někdo z před",
-    "genre": "",
-    "post_date": "2026-05-02 07:43",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/45/4580/2/500/Audiokniha-Zahada-zlate-stoly-Vlastimil-Vondruska.avif",
-    "download_urls": [
-      "https://webshare.cz/#/file/uPcki0mMzP/vlmvndzhdzltstly2013-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "ZÁHADA ZLATÉ ŠTOLY",
-    "description": "Další z příběhů královského prokurátora Oldřicha z Chlumu se tentokrát odehrává v okolí Prahy. Nevysvětlitelným způsobem se při cestě z královských dolů v Jílovém u Prahy ztratí truhlice plná zlata.",
-    "genre": "Historická detektivka",
-    "post_date": "2026-05-02 07:54",
-    "image_url": "https://www.tympanum.cz/im/coc/420/0/content/566222/web_zahada_zlate_stoly_audible_cover.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/jM8G8yaKkg/vlmvndzhdzltstly02-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Manželské zrcadlo",
-    "description": "Renesanční spis pro vzorné manželky obsahuje návod k vraždě. Hospodyně Jiřího Adama z Dobronína obdrží jako dárek knihu Manželské zrcadlo, která obsahuje různé také poučné příběhy a rady pro život vdané ženy. Sousedka Barča si spojí jeden z příběhů, které kniha popisuje, s jistou skutečnou událostí.",
-    "genre": "Detektivky",
-    "post_date": "2026-05-03 13:08",
-    "image_url": "https://www.radioteka.cz/im/coc/420/0/content/prod/633045/manzelskezrcadlo.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/NYvCDRSeQp/vlmvndmnzlkzrdlo2022-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Walliams, David",
-    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
-    "title": "Případy Afrodity Rossové #1 - Dědictví templářů",
-    "description": "Příběh nové série se odehrává ve dvou rovinách, první v roce 1993, kdy vystudovaná lingvistka a vlivem okolností také amatérská detektivka Dita Rossová překládá latinský rukopis, pátrá po vrahovi svého kolegy vědce a také po templářském pokladu. Druhá rovina se odehrává v roce 1537, kdy Vilém z Lipé",
-    "genre": "",
-    "post_date": "2026-05-04 17:39",
-    "image_url": "https://atkcdn.audioteka.com/cc/63/dedictvi-templaru/10.jpg?w=300&auto=format",
-    "download_urls": [
-      "https://webshare.cz/#/file/haIww3ALiy"
+      "https://webshare.cz/#/file/dniWGQmpH5"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -382,49 +119,32 @@
     "is_new": true
   },
   {
-    "author": "Giesbert, Franz-Olivier",
-    "topic_url": "https://war-forum.net/index.php?topic=1759690.0",
-    "title": "Případy Afrodity Rossové #2 - Dědictví skotských templářů",
-    "description": "TAJEMSTVÍ TEMPLÁŘSKÉHO POKLADU. VRAŽDA NA SKOTSKÉM HRADĚ. A PRAVDA, KTERÁ MŮŽE ZABÍJET. Lingvistka a historička Afrodita Rossová publikuje nález pokladu ukrytého templáři na Templštejně, a to samozřejmě vyvolá zájem nejen odborníků. Obrátí se na ni její skotský strýc Malcolm a prosí ji, aby za ním p",
-    "genre": "Detektivka",
-    "post_date": "2026-05-07 18:18",
-    "image_url": "https://atkcdn.audioteka.com/cc/cf/dedictvi-skotskych-templaru/4.jpg?w=300&auto=format",
+    "author": "Kozmon František",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1760024",
+    "title": "mbc napsal:",
+    "description": "Všechny mé  archivy jsou opatřeny 3% záznamem pro opravu dat, takže menší chyby lze ve WinRARu opravit.",
+    "genre": "",
+    "post_date": "2026-05-11 07:03",
+    "image_url": "",
     "download_urls": [
-      "https://webshare.cz/#/file/vg38WgXULp"
+      "https://webshare.cz/#/file/L0vbYctve4/kapitola-079-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
     "reply_problems": "",
-    "forum": "war-forum.net",
+    "forum": "warforum.xyz",
     "is_new": true
   },
   {
-    "author": "Giesbert, Franz-Olivier",
-    "topic_url": "https://war-forum.net/index.php?topic=1759690.0",
-    "title": "Ďáblova čísla",
-    "description": "Při běžné úřední cestě královského písaře Jiřího Adama z Dobronína do Dvora Králové dojde ve městě k vraždě. I když se radnice snaží utajit její okolnosti, mezi lidmi se rychle šíří panika, protože okolnosti napovídají, že jde o zásah temných sil. A tak navzdory tomu, že to není jeho povinnost, začn",
-    "genre": "Detektivky",
-    "post_date": "2026-05-12 09:51",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/118/11873/1/500/Audiokniha-Dablova-cisla-Vlastimil-Vondruska.avif",
+    "author": "Fombelle, Timothee de",
+    "topic_url": "https://war-forum.net/index.php?topic=1759642.0",
+    "title": "Fombelle, Timothee de - Tobias Lolness 2018 (cz) CRo",
+    "description": "Tobiášův lid žije ve stromě a nejvyšší jedinci neměří víc než dva milimetry... Proti malému Tobiášovi a jeho rodině však stojí celý jeho národ, a tak musí hlavní hrdina prchat ... Když si přečtete Tobiáše Lolnesse už se vždy budete dívat na stromy jinýma očima. Serial. Preklad Drahoslava Janderova.",
+    "genre": "",
+    "post_date": "2026-05-10 07:47",
+    "image_url": "",
     "download_urls": [
-      "https://webshare.cz/#/file/Eafb7GhfH7/vndvlmdblvcsl-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Clancy Tom",
-    "topic_url": "https://war-forum.net/index.php?topic=1330225.0",
-    "title": "Tom Clancy, Larry Bond - Rudá bouře",
-    "description": "Teroristickou akcí islámských fundamentalistů je Sovětský svaz zbaven přístupu ke svým ropným zásobám. Kreml rozhodne obsadit naftová pole Perského zálivu. K odlákání pozornosti NATO zahájí invazi do západní Evropy. Prvními výstřely začala třetí světová válka podle stále možného scénáře z 80. let...",
-    "genre": "Literatura světová, Romány, Válečné",
-    "post_date": "2026-05-10 04:50",
-    "image_url": "https://i.postimg.cc/zDLrbrQy/ruda-boure-VPc-1632.png",
-    "download_urls": [
-      "https://webshare.cz/#/file/NyhoEqz5Kg"
+      "https://webshare.cz/#/file/dWCQ9Tfn13/trpasli-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -450,15 +170,15 @@
     "is_new": true
   },
   {
-    "author": "Fombelle, Timothee de",
-    "topic_url": "https://war-forum.net/index.php?topic=1759642.0",
-    "title": "Fombelle, Timothee de - Tobias Lolness 2018 (cz) CRo",
-    "description": "Tobiášův lid žije ve stromě a nejvyšší jedinci neměří víc než dva milimetry... Proti malému Tobiášovi a jeho rodině však stojí celý jeho národ, a tak musí hlavní hrdina prchat ... Když si přečtete Tobiáše Lolnesse už se vždy budete dívat na stromy jinýma očima. Serial. Preklad Drahoslava Janderova.",
-    "genre": "",
-    "post_date": "2026-05-10 07:47",
-    "image_url": "",
+    "author": "Clancy Tom",
+    "topic_url": "https://war-forum.net/index.php?topic=1330225.0",
+    "title": "Tom Clancy, Larry Bond - Rudá bouře",
+    "description": "Teroristickou akcí islámských fundamentalistů je Sovětský svaz zbaven přístupu ke svým ropným zásobám. Kreml rozhodne obsadit naftová pole Perského zálivu. K odlákání pozornosti NATO zahájí invazi do západní Evropy. Prvními výstřely začala třetí světová válka podle stále možného scénáře z 80. let...",
+    "genre": "Literatura světová, Romány, Válečné",
+    "post_date": "2026-05-10 04:50",
+    "image_url": "https://i.postimg.cc/zDLrbrQy/ruda-boure-VPc-1632.png",
     "download_urls": [
-      "https://webshare.cz/#/file/dWCQ9Tfn13/trpasli-rar"
+      "https://webshare.cz/#/file/NyhoEqz5Kg"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -467,20 +187,20 @@
     "is_new": true
   },
   {
-    "author": "Werfel Franz",
-    "topic_url": "https://war-forum.net/index.php?topic=1510591.0",
-    "title": "Franz Werfel - Čtyřicet dnů",
-    "description": "Devítidílný seriál na motivy stejnojmenného románu. Přeložil Hanuš Karlach. Dramatizace Jan Vedral. Scénická hudba Petr Mandel. Štěpán,jeho syn (Libor Bouček), Avagjan, vychovatel (Ivan Řezáč), Müdür (Svatopluk Skopal), Aga Bereket (Josef Somr), Lékárník Grigor (Ilja Racek), Doktor Altuni (Petr Hani",
+    "author": "Saint-Exupéry Antoine",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1573574",
+    "title": "Opravené  v pôvodnom poste.",
+    "description": "",
     "genre": "",
-    "post_date": "2026-02-24 13:33",
+    "post_date": "2026-05-09 13:51",
     "image_url": "",
     "download_urls": [
-      "https://webshare.cz/#/file/NO4A2r4LNV/40-40-40-rar"
+      "https://webshare.cz/#/file/xSOln98Ovb/mp-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
     "reply_problems": "",
-    "forum": "war-forum.net",
+    "forum": "warforum.xyz",
     "is_new": true
   },
   {
@@ -518,15 +238,49 @@
     "is_new": true
   },
   {
-    "author": "David Urban",
-    "topic_url": "https://war-forum.net/index.php?topic=1730301.0",
-    "title": "David Urban, Vladimír Zlý - Perfektní alibi",
-    "description": "V Praze jsou zavražděny dvě ženy a u jejich těl leží hlavy koček. Policie má hlavního podezřelého. Ale co se zjištěním, že v době vražd byl prokazatelně v Ostravě? V Praze se začnou jednoho sychravého podzimu dít zvláštní věci: dvě ženy jsou brutálně podřezány a vrah k jejich tělům položí hlavy koče",
-    "genre": "Audiobook",
-    "post_date": "2026-05-08 18:56",
-    "image_url": "https://assets.audioteka.com/cz/images/products/vladimir-zly/perfektni-alibi-original.jpeg?w=300&auto=format",
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Krysburger",
+    "description": "DĚSIVĚ ZÁBAVNÁ KRYSOKNIHA Jak je u Walliamse obvyklé, nemají to jeho hrdinové v životě zrovna snadné. Ani Zoe není výjimkou. Další vřískavě vtipná, akční a dojemná audiokniha Davida Walliamse je tady. S malou Zoe to nevypadá dobře. Když zjistí, že její křeček zemřel, je zničená. S macechou, která ji",
+    "genre": "",
+    "post_date": "2026-05-09 07:59",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/139/13970/1/500/Audiokniha-Krysburger-David-Walliams.avif",
     "download_urls": [
-      "https://webshare.cz/#/file/3ta6SDKH1J"
+      "https://webshare.cz/#/file/lynARN5AD8"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Ledová obluda",
+    "description": "VŠICHNI JÍ ŘÍKALI OBLUDA, ALE PRO MĚ BYLA KAMARÁDKA Malá Elsie žije v Londýně roku 1899, kde to sirotci jako ona rozhodně nemají jednoduché. Během protloukání se v šedivých ulicích viktoriánské metropole však její život projasní novinka, že do místního Přírodovědného muzea přivezou dokonale zachovan",
+    "genre": "",
+    "post_date": "2026-05-09 07:54",
+    "image_url": "https://www.o2knihovna.cz/generated/covers/90/ab2-3c019b73-317d-4c1e-b7d0-29949a930cae-360-905f.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/E5Wal0BN3l"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Něfo",
+    "description": "K popukání zábavný, poněkud tajuplný příběh o neuvěřitelně laskavých rodičích a jejich děsivě příšerné dceři napsal fenomenální David Walliams a načetl nepřekonatelný Jiří Lábus. Myrta má všechno, na co si vzpomene. Jenže mít všechno jí pořád ještě není dost. Její rodiče, manželé Marcel a Miriam Mír",
+    "genre": "",
+    "post_date": "2026-05-09 07:49",
+    "image_url": "https://atkcdn.audioteka.com/cc/8f/nefo/66.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/PQO5TvzmjT"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -554,23 +308,6 @@
   {
     "author": "Corey James S.A. - Leviatan se probouzi",
     "topic_url": "https://war-forum.net/index.php?topic=1695394.0",
-    "title": "Expanze #4 - O poklad Ciboly",
-    "description": "Brány se otevřely a lidstvo znovu zachvátila kolonizační horečka… Po událostech s mimozemskou protomolekulou a otevření prstencových bran mají lidé na dosah tisíc neobydlených světů. Do vesmírného pohraničí proudí osadníci hledající nový život – nebo prchající před tím starým. Na planetě Ilus, přezd",
-    "genre": "",
-    "post_date": "2026-01-17 21:23",
-    "image_url": "https://atkcdn.audioteka.com/cc/9b/o-poklad-ciboly/4.jpg?w=300&auto=format",
-    "download_urls": [
-      "https://webshare.cz/#/file/LXyxt1JA3z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Corey James S.A. - Leviatan se probouzi",
-    "topic_url": "https://war-forum.net/index.php?topic=1695394.0",
     "title": "James S. A. Corey - Kalibánova válka",
     "description": "Ahoj, odkaz je nefunkční. Je možno ho prověřit? Děkuji moc.",
     "genre": "",
@@ -586,15 +323,15 @@
     "is_new": true
   },
   {
-    "author": "John Gwynne",
-    "topic_url": "https://war-forum.net/index.php?topic=1724507.0",
-    "title": "Věrní a padlí #3 - Zkáza",
-    "description": "Na Země vyhnanců se snesla pohroma v podobě války a chaosu. Záludná královna Rhin dobyla západ a nejvyšší král Nathair získal magický kotel, nejmocnější ze Sedmi pokladů, k jejichž shromáždění ho nabádá prohnaný Calidus s hordou děsivých démonů ze Zásvětí. Plánuje totiž s jejich pomocí přivést vládc",
-    "genre": "Literatura světová, Fantasy",
-    "post_date": "2026-01-19 06:46",
-    "image_url": "https://i.postimg.cc/NfPLXLk4/Audiokniha-Zkaza.jpg",
+    "author": "David Urban",
+    "topic_url": "https://war-forum.net/index.php?topic=1730301.0",
+    "title": "David Urban, Vladimír Zlý - Perfektní alibi",
+    "description": "V Praze jsou zavražděny dvě ženy a u jejich těl leží hlavy koček. Policie má hlavního podezřelého. Ale co se zjištěním, že v době vražd byl prokazatelně v Ostravě? V Praze se začnou jednoho sychravého podzimu dít zvláštní věci: dvě ženy jsou brutálně podřezány a vrah k jejich tělům položí hlavy koče",
+    "genre": "Audiobook",
+    "post_date": "2026-05-08 18:56",
+    "image_url": "https://assets.audioteka.com/cz/images/products/vladimir-zly/perfektni-alibi-original.jpeg?w=300&auto=format",
     "download_urls": [
-      "https://webshare.cz/#/file/RXuDkOqcJq"
+      "https://webshare.cz/#/file/3ta6SDKH1J"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -639,13 +376,13 @@
   {
     "author": "Klostermann Karel",
     "topic_url": "https://war-forum.net/index.php?topic=1316933.0",
-    "title": "Klostermann Karel - Bily samum 2014",
-    "description": "Samum je horký suchý vítr afrických pouští. Šumavský spisovatel Karel Klostermann si termín vypůjčil pro označení silné sněhové bouře, v níž se cestou ze školy ztratila skupina dětí.",
+    "title": "Klostermann Karel - Zmizela osada 2024 (cz) CRo",
+    "description": "Ponury dramaticky pribeh z prostredi sumavske drevarske osady pod Plohausenem. Lidske skutky a osudy, vina a trest na pozadi takrka dokumentarniho popisu zivota a zvyku drevaru a jejich rodin v hlubokych lesich Sumavy v sedmdesatych letech predminuleho stoleti, v tzv. zlatych brouckovych dobach po v",
     "genre": "",
-    "post_date": "2026-02-06 12:33",
+    "post_date": "2026-05-08 08:51",
     "image_url": "",
     "download_urls": [
-      "https://webshare.cz/#/file/asvyX3bAsJ/klosbisa4-rar"
+      "https://webshare.cz/#/file/VJPrqRmaFj/taborisko-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -654,15 +391,19 @@
     "is_new": true
   },
   {
-    "author": "Klostermann Karel",
-    "topic_url": "https://war-forum.net/index.php?topic=1316933.0",
-    "title": "Klostermann Karel - Zmizela osada 2024 (cz) CRo",
-    "description": "Ponury dramaticky pribeh z prostredi sumavske drevarske osady pod Plohausenem. Lidske skutky a osudy, vina a trest na pozadi takrka dokumentarniho popisu zivota a zvyku drevaru a jejich rodin v hlubokych lesich Sumavy v sedmdesatych letech predminuleho stoleti, v tzv. zlatych brouckovych dobach po v",
-    "genre": "",
-    "post_date": "2026-05-08 08:51",
-    "image_url": "",
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "David Walliams - Půlnoční gang",
+    "description": "Půlnoc je doba, kdy všechny děti tvrdě spí, samozřejmě až na... Půlnoční gang! Držte si berle, jízda začíná! Dobrodružství čeká někdy tam, kde bychom ho nejméně čekali. A pobyt v nemocnici se může změnit v supertajnou misi! Nevěříte? Tom si to taky nemyslel. Pak ale dostal na tělocviku ránu kriketov",
+    "genre": "Literatura světová, Humor, Pro děti a mládež",
+    "post_date": "2026-05-08 05:33",
+    "image_url": "https://i.postimg.cc/BnPQTHtB/Audiokniha-Pulnocni-gang-David-Walliams.jpg",
     "download_urls": [
-      "https://webshare.cz/#/file/VJPrqRmaFj/taborisko-rar"
+      "https://webshare.cz/#/file/DpOiJuGyiv",
+      "https://webshare.cz/#/file/O9WXC4VF7t",
+      "https://webshare.cz/#/file/iRyzeye6Zh",
+      "https://webshare.cz/#/file/T0cW9uip1U",
+      "https://webshare.cz/#/file/rtCA97cq5s"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -680,6 +421,44 @@
     "image_url": "https://atkcdn.audioteka.com/cc/7b/temne-brehy/4.jpg?w=300&auto=format",
     "download_urls": [
       "https://webshare.cz/#/file/MwG1SLghnK"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Giesbert, Franz-Olivier",
+    "topic_url": "https://war-forum.net/index.php?topic=1759690.0",
+    "title": "Případy Afrodity Rossové #2 - Dědictví skotských templářů",
+    "description": "TAJEMSTVÍ TEMPLÁŘSKÉHO POKLADU. VRAŽDA NA SKOTSKÉM HRADĚ. A PRAVDA, KTERÁ MŮŽE ZABÍJET. Lingvistka a historička Afrodita Rossová publikuje nález pokladu ukrytého templáři na Templštejně, a to samozřejmě vyvolá zájem nejen odborníků. Obrátí se na ni její skotský strýc Malcolm a prosí ji, aby za ním p",
+    "genre": "Detektivka",
+    "post_date": "2026-05-07 18:18",
+    "image_url": "https://atkcdn.audioteka.com/cc/cf/dedictvi-skotskych-templaru/4.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/vg38WgXULp"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Babička drsňačka #1 - Babička drsňačka",
+    "description": "Ben je k smrti otrávený, zase má strávit víkend u babičky: „Vždyť je s ní děsná nuda! Se všema starýma je nuda. Telka jí nefunguje, pořád chce jenom hrát scrabble a smrdí kapustou!“ Pěkně tvrdý odsudek z úst nezletilce, jenže to ještě Ben netuší dvě věci: 1) Jeho babička kdysi byla proslulou lupičko",
+    "genre": "Literatura světová, Humor, Pro děti a mládež",
+    "post_date": "2026-05-07 15:39",
+    "image_url": "https://i.postimg.cc/FKyh3RfP/Audiokniha-Babicka-drsnacka-David-Walliams.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/477Zfs6DAE",
+      "https://webshare.cz/#/file/9SX19V1K1O",
+      "https://webshare.cz/#/file/A4SbAwckYS",
+      "https://webshare.cz/#/file/PkyAWjEgrL",
+      "https://webshare.cz/#/file/PxF4KkqyTC"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -724,13 +503,13 @@
   {
     "author": "Frennstedt, Tina",
     "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Odložené případy #1 - Odložené případy: Nezvěstná",
-    "description": "Severské krimi inspirované skutečnými nevyřešenými případy kombinuje to nejlepší z populárních TV krimi seriálů Most a Zločin. V létě před 16 lety zmizela v jižním Švédsku 19letá dívka. Případ nebyl vyřešen a dívka se nikdy nenašla. Nyní se v Malmö objevil vrah, který napadá a znásilňuje ženy přímo",
-    "genre": "Audiobook",
-    "post_date": "2026-05-06 18:16",
-    "image_url": "https://atkcdn.audioteka.com/cc/d5/odlozene-pripady-nezvestna/157.jpg?w=300&auto=format",
+    "title": "Jeffrey Archer - Zlodějská čest",
+    "description": "V závěrečné 38. kapitole chybí načtených posledních 22 řádků. (chybějící text přiložen...) Politický thriller v němž iráčtí teroristé ukradnou slavný americký dokument Vyhlášení nezávislosti, který chtějí využít k politickému nátlaku. Dva roky po válce v Perském zálivu nastupuje do úřadu americký pr",
+    "genre": "Literatura světová, Thrillery",
+    "post_date": "2026-05-07 04:43",
+    "image_url": "https://i.postimg.cc/brJSPs3q/Audiokniha-Zlodejska-cest-Jeffrey-Archer.jpg",
     "download_urls": [
-      "https://webshare.cz/#/file/SXupcoHjTB"
+      "https://webshare.cz/#/file/2k2XmA1RXH"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -758,115 +537,13 @@
   {
     "author": "Frennstedt, Tina",
     "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "William Warwick #3 - Přimhouřit oko",
-    "description": "V tomto novém díle je William pověřen vyšetřováním korupce přímo v řadách policie. On a jeho tým se pustí do sledování seržanta Jerryho Summerse, detektiva, který si zjevně žije vysoce nad poměry svého policejního platu. Vše se však značně zkomplikuje, když se jedna z Williamových kolegyní do podezř",
-    "genre": "",
-    "post_date": "2026-04-26 21:23",
-    "image_url": "https://atkcdn.audioteka.com/cc/31/primhourit-oko/5.jpg?w=300&auto=format",
+    "title": "Odložené případy #1 - Odložené případy: Nezvěstná",
+    "description": "Severské krimi inspirované skutečnými nevyřešenými případy kombinuje to nejlepší z populárních TV krimi seriálů Most a Zločin. V létě před 16 lety zmizela v jižním Švédsku 19letá dívka. Případ nebyl vyřešen a dívka se nikdy nenašla. Nyní se v Malmö objevil vrah, který napadá a znásilňuje ženy přímo",
+    "genre": "Audiobook",
+    "post_date": "2026-05-06 18:16",
+    "image_url": "https://atkcdn.audioteka.com/cc/d5/odlozene-pripady-nezvestna/157.jpg?w=300&auto=format",
     "download_urls": [
-      "https://webshare.cz/#/file/VGGGQF5Kjw"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Frennstedt, Tina",
-    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Devítiocasá kočka (2022)",
-    "description": "Smutné, veselé i dojemné příběhy s často překvapivým koncem... Bestsellerový spisovatel Jeffrey Archer strávil dva roky v pěti různých věznicích a za tu dobu sesbíral nápady na řadu originálních povídek s rozličnými hrdiny. • Seznámíte se s „Mužem, který vyloupil vlastní poštu\", stejně jako s předse",
-    "genre": "",
-    "post_date": "2026-04-27 07:22",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/111/11154/2/500/Audiokniha-Devitiocasa-kocka-Jeffrey-Archer.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/QmwIt1xw8C/archjffdvtoctakcka2022-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Frennstedt, Tina",
-    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Cliftonova kronika #1 - Jen čas ukáže",
-    "description": "KDO JE OTCEM HARRYHO CLIFTONA? OBYČEJNÝ DOKAŘ NEBO NÁMOŘNÍ MAGNÁT? Velkolepý životní příběh Harryho Cliftona začíná v roce 1920 mrazivými slovy: „Tvrdili mi, že můj otec padl ve válce.“ Uplyne však ještě dalších dvacet let, než Harry zjistí, jak jeho otec skutečně zemřel, což ho přivede k otázce, kd",
-    "genre": "Literatura světová, Pro ženy, Historické romány",
-    "post_date": "2026-04-29 07:08",
-    "image_url": "https://i.postimg.cc/655msJYv/Audiokniha-Jen-cas-ukaze-Jeffrey-Archer.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/GSkHe6Am3X"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Frennstedt, Tina",
-    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Cliftonova kronika #2 - Otcovy hříchy",
-    "description": "New York, 1939. Harry Clifton, nyní pod novou identitou jako Tom Bradshaw, je zatčen za vraždu prvního stupně. Když mu špičkový manhattanský právník Sefton Jelks nabídne zdarma své služby, Harry, který je na mizině, nemá jinou možnost než jeho nabídku a rady přijmout. Jenže poté co je Harry shledán",
-    "genre": "Literatura světová, Pro ženy, Historické romány",
-    "post_date": "2026-04-29 07:11",
-    "image_url": "https://i.postimg.cc/rwg4v3nH/Audiokniha-Otcovy-hrichy-Jeffrey-Archer.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/rG4KRmwHBF"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Frennstedt, Tina",
-    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Cliftonova kronika #3 - Přísně střežené tajemství",
-    "description": "Napínavá rodinná sága z pera brilantního vypravěče Jeffreyho Archera pokračuje. Píše se rok 1945 a Sněmovna lordů hlasuje o tom, kdo zdědí rodinné bohatství Barringtonů. A rozhodující hlas lorda kancléře zamíchá kartami jak Harryho Cliftona, tak Gilese Barringtona. Harry se vrací do Ameriky, aby zde",
-    "genre": "Literatura světová, Pro ženy, Historické romány",
-    "post_date": "2026-04-30 09:18",
-    "image_url": "https://i.postimg.cc/yxDNTtHL/Audiokniha-Prisne-strezene-tajemstvi-Jeffrey-Archer.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/2TgBkCDTbw"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Frennstedt, Tina",
-    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Cliftonova kronika #4 - Příliš odvážné přání",
-    "description": "Na začátku čtvrtého dílu Cliftonovy kroniky se setkáváme s Harrym Cliftonem a jeho ženou Emmou, kteří spěchají do nemocnice, aby se dozvěděli o osudu jejich syna Sebastiana. Ten se stal účastníkem vážné autonehody, která si vyžádala i oběť na životě. Ale kdo zemřel? Sebastian, nebo jeho nejlepší pří",
-    "genre": "Literatura světová, Pro ženy, Historické romány",
-    "post_date": "2026-04-30 09:21",
-    "image_url": "https://i.postimg.cc/BZmYLybR/Audiokniha-Prilis-odvazne-prani-Jeffrey-Archer.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/qlZ8oyvgBd"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Frennstedt, Tina",
-    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
-    "title": "Jeffrey Archer - Zlodějská čest",
-    "description": "V závěrečné 38. kapitole chybí načtených posledních 22 řádků. (chybějící text přiložen...) Politický thriller v němž iráčtí teroristé ukradnou slavný americký dokument Vyhlášení nezávislosti, který chtějí využít k politickému nátlaku. Dva roky po válce v Perském zálivu nastupuje do úřadu americký pr",
-    "genre": "Literatura světová, Thrillery",
-    "post_date": "2026-05-07 04:43",
-    "image_url": "https://i.postimg.cc/brJSPs3q/Audiokniha-Zlodejska-cest-Jeffrey-Archer.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/2k2XmA1RXH"
+      "https://webshare.cz/#/file/SXupcoHjTB"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -884,40 +561,6 @@
     "image_url": "",
     "download_urls": [
       "https://webshare.cz/#/file/72TXvxFtiH/nocny-spev-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Kulhánek Jiří - Soumrak",
-    "topic_url": "https://war-forum.net/index.php?topic=1684151.0",
-    "title": "Jiří Kulhánek - Stroncium",
-    "description": "kniha Jiřího Kulhánka je pochmurný příběh z pochmurné budoucnosti, kdy na Zemi žije víc mrtvých než živých, kdy lží je víc než obvykle a kdy ledu je mnohem víc než whisky.",
-    "genre": "Romány, Literatura česká, Sci-fi",
-    "post_date": "2026-05-05 08:45",
-    "image_url": "https://i.postimg.cc/65ySHmb6/stazeny-soubor-(1).jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/bMo3IfrFc8"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Kulhánek Jiří - Soumrak",
-    "topic_url": "https://war-forum.net/index.php?topic=1684151.0",
-    "title": "Jiří Kulhánek - Divocí a zlí 1-4",
-    "description": "Příběh se skládá ze čtyř knih s názvy: Čas mrtvých, Hardcore, Temný prorok a Kříže.",
-    "genre": "Romány, Literatura česká, Sci-fi",
-    "post_date": "2026-05-05 09:05",
-    "image_url": "https://i.postimg.cc/jqcVLfmX/Divoci).jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/kwSFe8WCYx"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -962,13 +605,13 @@
   {
     "author": "Ortega, Lucie",
     "topic_url": "https://war-forum.net/index.php?topic=1759401.0",
-    "title": "Světla nad močálem #1 - Světla nad močálem",
-    "description": "Lena si vzala život naprosto dobrovolně – mezi lidmi už žít nemohla. Teď je z ní navka, budoucí bludička. Aby se jí skutečně stala, musí kromě nových dovedností zvládnout to hlavní: nalákat do močálu lidskou duši. Jenže po střetnutí s nepřátelskou strigou má na splnění úkolů místo sedmi let jen sedm",
+    "title": "Světla nad močálem #3 - Pán močálu",
+    "description": "Poté, co Divišův život nečekaně utnula střela do srdce, zůstal uvězněný na Prahu, místě mezi světem živých a mrtvých. Stal se bludníkem a dostal jméno Nemoj. V močálu obklopeném hlubokými hvozdy si vybudoval palác, mezi démony přírody nalezl přátele a získal bohatství, moc a postavení. Zdálo se, že",
     "genre": "",
-    "post_date": "2026-05-05 18:18",
-    "image_url": "https://atkcdn.audioteka.com/cc/75/svetla-nad-mocalem-audioteka/81.jpg?w=300&auto=format",
+    "post_date": "2026-05-05 18:46",
+    "image_url": "https://atkcdn.audioteka.com/cc/3a/pan-mocalu/4.jpg?w=300&auto=format",
     "download_urls": [
-      "https://webshare.cz/#/file/fI2jOkM38E"
+      "https://webshare.cz/#/file/ClNiykBzpm"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -996,13 +639,13 @@
   {
     "author": "Ortega, Lucie",
     "topic_url": "https://war-forum.net/index.php?topic=1759401.0",
-    "title": "Světla nad močálem #3 - Pán močálu",
-    "description": "Poté, co Divišův život nečekaně utnula střela do srdce, zůstal uvězněný na Prahu, místě mezi světem živých a mrtvých. Stal se bludníkem a dostal jméno Nemoj. V močálu obklopeném hlubokými hvozdy si vybudoval palác, mezi démony přírody nalezl přátele a získal bohatství, moc a postavení. Zdálo se, že",
+    "title": "Světla nad močálem #1 - Světla nad močálem",
+    "description": "Lena si vzala život naprosto dobrovolně – mezi lidmi už žít nemohla. Teď je z ní navka, budoucí bludička. Aby se jí skutečně stala, musí kromě nových dovedností zvládnout to hlavní: nalákat do močálu lidskou duši. Jenže po střetnutí s nepřátelskou strigou má na splnění úkolů místo sedmi let jen sedm",
     "genre": "",
-    "post_date": "2026-05-05 18:46",
-    "image_url": "https://atkcdn.audioteka.com/cc/3a/pan-mocalu/4.jpg?w=300&auto=format",
+    "post_date": "2026-05-05 18:18",
+    "image_url": "https://atkcdn.audioteka.com/cc/75/svetla-nad-mocalem-audioteka/81.jpg?w=300&auto=format",
     "download_urls": [
-      "https://webshare.cz/#/file/ClNiykBzpm"
+      "https://webshare.cz/#/file/fI2jOkM38E"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -1062,20 +705,71 @@
     "is_new": true
   },
   {
-    "author": "Kleist, Heinrich von",
-    "topic_url": "https://war-forum.net/index.php?topic=1758163.0",
-    "title": "Kleist, Heinrich von - Kačenka z Heillbronu 1984 (cz)",
-    "description": "Zdánlivě pohádkový příběh mísí žánry a na rytířské mravy se dívá s ironií. Divadelní hra Heinricha von Kleista byla poprvé uvedena v roce 1810. Tehdejší obecenstvo překvapila neobvyklým mísením žánrů, ironickým pohledem na rytířské mravy a kritikou společenské nerovnosti, které byly součástí tohoto",
-    "genre": "",
-    "post_date": "2026-04-06 11:07",
-    "image_url": "",
+    "author": "Kulhánek Jiří - Soumrak",
+    "topic_url": "https://war-forum.net/index.php?topic=1684151.0",
+    "title": "Jiří Kulhánek - Divocí a zlí 1-4",
+    "description": "Příběh se skládá ze čtyř knih s názvy: Čas mrtvých, Hardcore, Temný prorok a Kříže.",
+    "genre": "Romány, Literatura česká, Sci-fi",
+    "post_date": "2026-05-05 09:05",
+    "image_url": "https://i.postimg.cc/jqcVLfmX/Divoci).jpg",
     "download_urls": [
-      "https://webshare.cz/#/file/J3YfVguyRC/pecena-kacka-rar"
+      "https://webshare.cz/#/file/kwSFe8WCYx"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
     "reply_problems": "",
     "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Kulhánek Jiří - Soumrak",
+    "topic_url": "https://war-forum.net/index.php?topic=1684151.0",
+    "title": "Jiří Kulhánek - Stroncium",
+    "description": "kniha Jiřího Kulhánka je pochmurný příběh z pochmurné budoucnosti, kdy na Zemi žije víc mrtvých než živých, kdy lží je víc než obvykle a kdy ledu je mnohem víc než whisky.",
+    "genre": "Romány, Literatura česká, Sci-fi",
+    "post_date": "2026-05-05 08:45",
+    "image_url": "https://i.postimg.cc/65ySHmb6/stazeny-soubor-(1).jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/bMo3IfrFc8"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Případy Afrodity Rossové #1 - Dědictví templářů",
+    "description": "Příběh nové série se odehrává ve dvou rovinách, první v roce 1993, kdy vystudovaná lingvistka a vlivem okolností také amatérská detektivka Dita Rossová překládá latinský rukopis, pátrá po vrahovi svého kolegy vědce a také po templářském pokladu. Druhá rovina se odehrává v roce 1537, kdy Vilém z Lipé",
+    "genre": "",
+    "post_date": "2026-05-04 17:39",
+    "image_url": "https://atkcdn.audioteka.com/cc/63/dedictvi-templaru/10.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/haIww3ALiy"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Milton John",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1743654",
+    "title": "John Milton: Samson Bojovník",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-05-04 13:16",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/DsSho5EviR/jmsb-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
     "is_new": true
   },
   {
@@ -1115,15 +809,15 @@
   {
     "author": "C. D. Payne",
     "topic_url": "https://war-forum.net/index.php?topic=1759313.0",
-    "title": "Mládí v Hajzlu 1,2,3",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-05-03 13:37",
-    "image_url": "",
+    "title": "C. D. Payne - Nestydaté plavky",
+    "description": "Rok 1957, západní pobřeží USA a mladý muž Colm s filmařskými ambicemi – tak začíná nová kniha úspěšného autora C. D. Payna. Colm odchází do malého městečka, aby zde po smrti svého strýce vedl rodinnou firmu na výrobu plavek nadměrných velikostí. Po příjezdu se obává, že ho čekají dlouhé měsíce napln",
+    "genre": "Literatura světová, Romány",
+    "post_date": "2026-05-04 08:59",
+    "image_url": "https://i.postimg.cc/GmDZB1JB/Audiokniha-Nestydate-plavky-C-D-Payne.jpg",
     "download_urls": [
-      "https://webshare.cz/#/file/Jb373fXCgE/mh-7z"
+      "https://webshare.cz/#/file/6wnEOxNaV5"
     ],
-    "password": "mvomvomve",
+    "password": "neuvedeno",
     "problems": "žádné",
     "reply_problems": "",
     "forum": "war-forum.net",
@@ -1147,104 +841,6 @@
     "is_new": true
   },
   {
-    "author": "C. D. Payne",
-    "topic_url": "https://war-forum.net/index.php?topic=1759313.0",
-    "title": "C. D. Payne - Nestydaté plavky",
-    "description": "Rok 1957, západní pobřeží USA a mladý muž Colm s filmařskými ambicemi – tak začíná nová kniha úspěšného autora C. D. Payna. Colm odchází do malého městečka, aby zde po smrti svého strýce vedl rodinnou firmu na výrobu plavek nadměrných velikostí. Po příjezdu se obává, že ho čekají dlouhé měsíce napln",
-    "genre": "Literatura světová, Romány",
-    "post_date": "2026-05-04 08:59",
-    "image_url": "https://i.postimg.cc/GmDZB1JB/Audiokniha-Nestydate-plavky-C-D-Payne.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/6wnEOxNaV5"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Hašek, Jaroslav",
-    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
-    "title": "Jaroslav Hašek - Osudy dobrého vojáka Švejka",
-    "description": "Rudolf Hrušínský, Martin Dejdar, Pavel Zedníček, Arnošt Goldflam Bohužel  chybí poslední kapitola...Tak, pokud někdo vlastní??? -",
-    "genre": "Romány, Literatura česká, Humor",
-    "post_date": "2025-12-21 06:52",
-    "image_url": "https://i.postimg.cc/J49Dq61L/Svejk-kaiser.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/AuBPQC81HM",
-      "https://webshare.cz/#/file/xBfxUiVxVx",
-      "https://webshare.cz/#/file/LcUbIP13Pf",
-      "https://webshare.cz/#/file/qhemqFP8HB",
-      "https://webshare.cz/#/file/LfUY8gvy0c"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Hašek, Jaroslav",
-    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
-    "title": "Bohužel  chybí poslední kapitola...Tak, pokud někdo vlastní???",
-    "description": "",
-    "genre": "",
-    "post_date": "2025-12-21 16:03",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/tEH2on0uXY"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Hašek, Jaroslav",
-    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
-    "title": "Jaroslav Hašek - Výběr z díla",
-    "description": "Miroslav Táborský, Ladislav Frej, Martin Stránský, Jožka Wannerová, Vojta Merten, Jára Kohout, Ivan Lupták, Jakub Albrecht, Vojtěch Vondráček ............................................................................................",
-    "genre": "Literatura česká, Humor, povídky",
-    "post_date": "2025-12-31 07:13",
-    "image_url": "https://i.postimg.cc/V6s1JQST/Vyber-z-dila-svetove-prosluleho-spisovate.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/aL9f4VmSvF",
-      "https://webshare.cz/#/file/hFiJ3vXZTr",
-      "https://webshare.cz/#/file/w0jo0noVSo",
-      "https://webshare.cz/#/file/OfQUPatBfX",
-      "https://webshare.cz/#/file/Sb04pnGl5Y",
-      "https://webshare.cz/#/file/LccoCjxXLD"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Hašek, Jaroslav",
-    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
-    "title": "Jaroslav Hašek - Pan Kobkán vdává dceru",
-    "description": ".................................................................................................. Vladimír Ráž, Vlastimil Hašek, Zora Jandová, Jiřina Bohdalová, František Filipovský, Jiří Lír, Stella Zázvorková...",
-    "genre": "Literatura česká, Humor, povídky",
-    "post_date": "2026-01-01 06:19",
-    "image_url": "https://i.postimg.cc/hv8KdgLy/Pan-Kobkan-vdava-dceru.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/9dDTDkz2dK",
-      "https://webshare.cz/#/file/XyLSHX34bi",
-      "https://webshare.cz/#/file/qDyXzMBtdo",
-      "https://webshare.cz/#/file/kSxpQ029Ht",
-      "https://webshare.cz/#/file/75Jlmwww67"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
     "author": "Hašek, Jaroslav",
     "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
     "title": "Jaroslav Hašek - Osudy dobrého vojáka Švejka",
@@ -1254,6 +850,40 @@
     "image_url": "https://i.postimg.cc/6qfNCVCc/Audiokniha-Osudy-dobreho-vojaka-Svejka-Jaroslav-Hasek.jpg",
     "download_urls": [
       "https://webshare.cz/#/file/gD4KTLXeKD"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "C. D. Payne",
+    "topic_url": "https://war-forum.net/index.php?topic=1759313.0",
+    "title": "Mládí v Hajzlu 1,2,3",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-05-03 13:37",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/Jb373fXCgE/mh-7z"
+    ],
+    "password": "mvomvomve",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Manželské zrcadlo",
+    "description": "Renesanční spis pro vzorné manželky obsahuje návod k vraždě. Hospodyně Jiřího Adama z Dobronína obdrží jako dárek knihu Manželské zrcadlo, která obsahuje různé také poučné příběhy a rady pro život vdané ženy. Sousedka Barča si spojí jeden z příběhů, které kniha popisuje, s jistou skutečnou událostí.",
+    "genre": "Detektivky",
+    "post_date": "2026-05-03 13:08",
+    "image_url": "https://www.radioteka.cz/im/coc/420/0/content/prod/633045/manzelskezrcadlo.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/NYvCDRSeQp/vlmvndmnzlkzrdlo2022-rar"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -1298,13 +928,13 @@
   {
     "author": "Vágner, Josef",
     "topic_url": "https://war-forum.net/index.php?topic=1759274.0",
-    "title": "Vágner Josef - Kimuri 1997",
-    "description": "Lovecké příběhy a pohádky z Afriky Kniha sestavená z autorových loveckých příhod, vyprávění Afričanů, afrických pohádek a informací o životě africké zvěře. Četba na pokračování z prózy českého přirodovědce, cestovatele a lovce. Hudba Katarína Bielčiková.",
-    "genre": "",
-    "post_date": "2026-05-02 12:18",
-    "image_url": "",
+    "title": "Ve výslužbě #3 - Návštěvník z minulosti",
+    "description": "Když jsou v ospalé vesnici nalezeny při stavbě domu lidské ostatky, vyvolá to pochopitelně pozdvižení. Komu zachovalá kostra patří? Z jaké doby pochází a jak dotyčný zemřel? Tuto záhadu se na vlastní pěst snaží rozlousknout místní rodák a detektiv na penzi Arnošt Milota přezdívaný Arno. Pustí se do",
+    "genre": "Detektivky, krimi, Literatura česká",
+    "post_date": "2026-05-03 08:01",
+    "image_url": "https://i.postimg.cc/B6mnJzzr/Navstevnik-z-minulosti-Martin-Goffa.jpg",
     "download_urls": [
-      "https://webshare.cz/#/file/2VagRikZwM/sd4as4da-rar"
+      "https://webshare.cz/#/file/qYw7Z2EMUW"
     ],
     "password": "neuvedeno",
     "problems": "žádné",
@@ -1327,603 +957,6 @@
     "problems": "žádné",
     "reply_problems": "",
     "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Vágner, Josef",
-    "topic_url": "https://war-forum.net/index.php?topic=1759274.0",
-    "title": "Ve výslužbě #3 - Návštěvník z minulosti",
-    "description": "Když jsou v ospalé vesnici nalezeny při stavbě domu lidské ostatky, vyvolá to pochopitelně pozdvižení. Komu zachovalá kostra patří? Z jaké doby pochází a jak dotyčný zemřel? Tuto záhadu se na vlastní pěst snaží rozlousknout místní rodák a detektiv na penzi Arnošt Milota přezdívaný Arno. Pustí se do",
-    "genre": "Detektivky, krimi, Literatura česká",
-    "post_date": "2026-05-03 08:01",
-    "image_url": "https://i.postimg.cc/B6mnJzzr/Navstevnik-z-minulosti-Martin-Goffa.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/qYw7Z2EMUW"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Maurois, André",
-    "topic_url": "https://war-forum.net/index.php?topic=1756878.0",
-    "title": "Maurois Andre - Mlceni plukovnika Brambla (2004)",
-    "description": "S humorem a ironickym nadhledem, s vynikajicim smyslem pro psychologii hrdinu, stavi proti sobe anglickou a francouzskou narodni mentalitu ilustrovanou na jednotlivych prislusnicich dustojnickeho sboru, kteri uprostred valecne vravy konfrontuji sve nazory na valku, politiku a spolecnost.",
-    "genre": "",
-    "post_date": "2026-03-07 08:27",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/Ynt9KqqIVA/grule-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Maurois, André",
-    "topic_url": "https://war-forum.net/index.php?topic=1756878.0",
-    "title": "Maurois André - Dvě lásky Filipa Marcenata (2011)",
-    "description": "Dvě lásky Filipa Marcenata, druhý román francouzského prozaika, dramatika a esejisty André Mauroise, je nejčastěji vydávaným románem autorovým. Subtilní psycholog a mistrovský prozaik v něm podal podivuhodně pronikavou analýzu vztahu lidí ve zdánlivě obyčejném manželství. Dvě lásky Filipa Marcenata",
-    "genre": "",
-    "post_date": "2026-05-02 12:16",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/5wz6Y8nLUc/mauadvelfiliarce-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Clavell, James",
-    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
-    "title": "Asijská sága #3 - Gaidžin",
-    "description": "Příběh se odehrává 20 let po událostech popsaných v Tchaj-panovi. Zachycuje dobrodružství Malcolma Struana, dědice obchodní společnosti Struan's, v Japonsku roku 1862. V ději je do značné hloubky vysvětlena politická situace v Japonsku a obtíže, kterým byli „západní“ cizinci nuceni čelit. Příběh byl",
-    "genre": "Literatura světová, Historické romány",
-    "post_date": "2026-03-03 07:17",
-    "image_url": "https://i.postimg.cc/N0qmj8hN/Gaidzin.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/QE6lxPwF5A"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Clavell, James",
-    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
-    "title": "Asijská sága #5 - Vznešený dům",
-    "description": "Panský (vznešený) dům je také přezdívka firmy Struan's, obchodní společnosti, která hraje ústřední roli ve většině románů Asijské ságy. V roce 1963 se tchaj-pan Ian Dunross pokouší zachránit rodinnou firmu (Struan's) z obtížné finanční situace, v které ji zanechal jeho předchůdce. Proto se snaží uza",
-    "genre": "Literatura světová, Historické romány",
-    "post_date": "2026-03-03 07:19",
-    "image_url": "https://i.postimg.cc/nz5Hnkgx/Vzneseny-dum.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/QgPvFoY0Ug"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Clavell, James",
-    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
-    "title": "Asijská sága #6 - Smršť",
-    "description": "Děj se odehrává v Íránu v roce 1979 a soustředí se na osudy skupiny pilotů vrtulníků firmy Struan's během pádu íránské monarchie a vzestupu Ajatoláha Chomejního. Stejně jako v ostatních Clavellových románech i ve Smršti vystupuje velké množství postav a prolíná se tu mnoho dějových linií.",
-    "genre": "Literatura světová, Historické romány",
-    "post_date": "2026-05-02 06:16",
-    "image_url": "https://i.postimg.cc/0ycHnz5x/Audiokniha-Smrst-James-Clavell.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/arVbaY0xga"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Clavell, James",
-    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
-    "title": "Asijská sága: Další  interpreti",
-    "description": "",
-    "genre": "Literatura světová, Historické romány",
-    "post_date": "2026-05-02 06:23",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/69pV4sEQtT",
-      "https://webshare.cz/#/file/juKCar2zcm",
-      "https://webshare.cz/#/file/BIrN5RNeIX"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Wiesel, Elie",
-    "topic_url": "https://war-forum.net/index.php?topic=1759227.0",
-    "title": "Wiesel Elie - Svitani 2006 (cz) CRo",
-    "description": "Wieselovo Svitani ma dnes, kdy z izraelske politiky odchazi generace, ktera bojovala v armade proti Anglicanum, zvlastni nalehavost. Pribeh mladeho clena teroristicke zidovske skupiny je tragicky, jeho zivot je poznamenan smrti od sameho pocatku a jeho ucast na cinech nasili je trapenim bez nadeje.",
-    "genre": "",
-    "post_date": "2026-05-01 11:37",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/MWs9v8MMoc/svitni-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Olbracht, Ivan",
-    "topic_url": "https://war-forum.net/index.php?topic=1759226.0",
-    "title": "Olbracht Ivan - Nikola Suhaj loupeznik 1980 (cz)-hra",
-    "description": "Rozhlasové zpracování básnické prózy. Dramatizace Jiří Šotola. Hudba Vladimír Truc. Dramaturg Josef Hlavnička. Jura Šuhaj (Miroslav Masopust), Danilo Jasinko (Josef Vinklář), Ihnat Sopko (Petr Haničinec), Derbak Derbačok (Čestmír Řanda), Adam Chrepta (Martin Štěpánek), Abram Beer (Martin Růžek), Žid",
-    "genre": "",
-    "post_date": "2026-05-01 11:34",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/jvfzvHxT0M/lapko-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Sirotek Michal",
-    "topic_url": "https://war-forum.net/index.php?topic=1756385.0",
-    "title": "Michal Sirotek - Zelený muž",
-    "description": "Před rokem přišla během tragického požáru o matku. Teď se Nikol vrací z Prahy zpět do rodného města v srdci Šumavy. Minulost ale ještě neřekla své poslední slovo a znovu otevírá staré rány. Nikol zjišťuje, že se v okolí dějí znepokojivé věci, které vyvolávají mnoho otázek. Kdo je tajemný cizinec, je",
-    "genre": "",
-    "post_date": "2026-02-25 15:37",
-    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/161/16137/1/500/Audiokniha-Zeleny-muz-Michal-Sirotek.avif",
-    "download_urls": [
-      "https://fastshare.cloud/33393340/simichzemu.zip"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Sirotek Michal",
-    "topic_url": "https://war-forum.net/index.php?topic=1756385.0",
-    "title": "Znamení padlých",
-    "description": "Mezi lidmi zuří válka, to nejhorší však teprve přijde Dva národy – jeden nekončící svár. Po deseti letech křehkého míru se rozhořel nový konflikt a nemilosrdně zasáhl do životů všech lidí. Styr a a Lišja se snaží odhalit viníky strašlivých jatek, každý z nich však z jiného důvodu. On chce pomstít sv",
-    "genre": "",
-    "post_date": "2026-04-30 23:25",
-    "image_url": "https://atkcdn.audioteka.com/cc/24/znameni-padlych/4.jpg?w=300&auto=format",
-    "download_urls": [
-      "https://webshare.cz/#/file/N7mv8JcUWx"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Sue, Eugéne",
-    "topic_url": "https://war-forum.net/index.php?topic=1759182.0",
-    "title": "Sue Eugéne - Bitva u Navarina 2004 (cz)",
-    "description": "Pribeh namornika za velke historicke bitvy dne 20. rijna 1827 v zalivu u reckeho pristavu Navarino (dnesni Pylos). Povidku francouzskeho spisovatele z roku 1842 z vlastniho prekladu pro rozhlas pravil Petr Turek. Ucinkuje Pavel Soukup. V roce 2004 natocil reziser Vlado Rusko. Povidka francouzskeho s",
-    "genre": "",
-    "post_date": "2026-04-30 12:30",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/z0l3E7LFse/bitva1842-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Epstein, Marek",
-    "topic_url": "https://war-forum.net/index.php?topic=1754576.0",
-    "title": "Epstein, Marek - Na věky věků 2018",
-    "description": "Po úspěchu, který sklidil před třemi lety s hrou Pescho, se scenárista Marek Epstein vrací nejen k rozhlasové dramatice, ale také k žánru dystopie a budování budoucího či paralelního světa, jenž v sobě ale nese palčivé otázky naší právě prožívané současnosti. Hru o hledání zapomenutého citu ve světě",
-    "genre": "",
-    "post_date": "2026-01-19 18:05",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/UhOeKQs7xl/naveky-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Epstein, Marek",
-    "topic_url": "https://war-forum.net/index.php?topic=1754576.0",
-    "title": "Epstein Marek - Ocucanej konec 2017 (cz) CRo",
-    "description": "Povídkový soubor úspěšného filmového a televizního scénáristy (Ve stínu, Roming, Václav, Clona…). Dějově bohaté a čtivé povídky spojuje postava hlavního hrdiny, kterého autor sleduje od dětství až do Kristových let. Pro rozhlas připravila Nikol Patíková. Dramaturgie Alena Blažejovská.",
-    "genre": "",
-    "post_date": "2026-04-30 12:25",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/ypjdHfBZT0/marek-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Foster, Alan Dean",
-    "topic_url": "https://war-forum.net/index.php?topic=1757402.0",
-    "title": "Vetřelci",
-    "description": "Poté, co prožila drsné setkání s prakticky neporazitelným vetřelcem, je Ellen Ripley v záchranném modulu ztracena někde ve vesmíru. Po nalezení záchranného modulu se dozví, že na planetě LV-426, kde její posádka našla mimozemskou loď, vznikla kolonie. Nikdo jí nevěří, že tam číhá smrtelné nebezpečí.",
-    "genre": "",
-    "post_date": "2026-03-20 11:29",
-    "image_url": "https://media.themoviedb.org/t/p/w440_and_h660_face/ykxmb0S0RVCWxv7V90jI5W6taIF.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/LBsVkjQeNL/fsrdnalnvtrci-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Foster, Alan Dean",
-    "topic_url": "https://war-forum.net/index.php?topic=1757402.0",
-    "title": "Alan Dean Foster -",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-04-28 18:00",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/v9RqVNIGpl/adfvc-mp3"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "war-forum.net",
-    "is_new": true
-  },
-  {
-    "author": "Bryndza Robert",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1655034",
-    "title": "Reupload =",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-05-12 19:14",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/R4LNgrZVXl/rb-01-dvl-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "chybí heslo",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Kozmon František",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1760024",
-    "title": "mbc napsal:",
-    "description": "Všechny mé  archivy jsou opatřeny 3% záznamem pro opravu dat, takže menší chyby lze ve WinRARu opravit.",
-    "genre": "",
-    "post_date": "2026-05-11 07:03",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/L0vbYctve4/kapitola-079-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "King Stephen / + EN",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1212103",
-    "title": "xxxx napsal:",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-02-02 17:58",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/group/bInzApq9Eg/"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Saint-Exupéry Antoine",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1573574",
-    "title": "Opravené  v pôvodnom poste.",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-05-09 13:51",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/xSOln98Ovb/mp-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Hajaja",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
-    "title": "Matěj Samec: Zvláštních věcí plný svět.",
-    "description": "Jak vypadá ostrov, na který ještě nikdy nikdo nevkročil?  Jak by vypadal vesmír, kdybychom ho mohli vidět z dálky? Proč někdy lidé pláčou, i když se usmívají?",
-    "genre": "",
-    "post_date": "2025-12-05 16:44",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/AXoaYCXt8g/matsamzvlvplnsv-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Hajaja",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
-    "title": "Hana Lehečková: Příběh slavné rytířky Leopoldy z Blanice u Bavorova.",
-    "description": "Leopolda je obyčejné děvče ze statku. Stará se o zvířata a domácnost, jenže krmit slepice a prát prádlo ji tak docela nebaví. Sní totiž o tom, že bude bojovat v důležitých bitvách a válkách a zachraňovat zakleté prince a princezny. Chce ve svém životě jediné – stát se rytířkou! Poslechněte si původn",
-    "genre": "",
-    "post_date": "2025-12-21 16:00",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/fdILXd6Kcp/hanlehpslarytlezbluba-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Hajaja",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
-    "title": "Melita Denková: Pohádky z růží.",
-    "description": "Představte si, jak by to bylo krásné, kdybychom rozuměli tomu, co si povídají květiny. Třeba si navzájem vyprávějí pohádky. Tři příběhy s vůní růžových květů.",
-    "genre": "",
-    "post_date": "2026-01-07 15:54",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/9l466j9cgj/meldenpohzr-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Hajaja",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
-    "title": "David Košťák - Kryštof z papíru.",
-    "description": "Už se vám někdy stalo, že se vám nechtělo vylézt z postele? To byste si rozuměli s Kryštofem.",
-    "genre": "",
-    "post_date": "2026-01-17 15:57",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/aQJ1OhRMFA/davkokryzpap-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Hajaja",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
-    "title": "Zuzana Pospíšilová: Vánoční pohádky.",
-    "description": "Poslechněte si neuvěřitelné příběhy o tom, jak se ztratily Vánoce nebo jak vodník Pentlička zachraňoval své kapříky. Ale také třeba vyprávění o namyšlených vánočních cukrátkách a hádavých dárcích nebo o jedné zvědavé Hvězdičce, která spadla z nebe.",
-    "genre": "",
-    "post_date": "2026-01-30 16:01",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/5rJlncsl0B/zuzposvpoh-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Milton John",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1743654",
-    "title": "John Milton: Samson Bojovník",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-05-04 13:16",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/DsSho5EviR/jmsb-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Dickens Charles",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=735366",
-    "title": "Charles Dickens - Zvony novoroční",
-    "description": "Tobiášek Ťapka pracuje jako poslíček. Není už zrovna nejmladší a tím pádem nerychlejší, ale o to je svědomitější. Na své zakázky čekává na schodech kostela. Rytmus i atmosféru jeho častých a košatých úvah tak určují zvony.",
-    "genre": "",
-    "post_date": "2026-01-11 12:09",
-    "image_url": "https://i.postimg.cc/bwnRsNx7/cdzn.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/flc80QUZ2K/cdzn-zip"
-    ],
-    "password": "wfm.xyz",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Přidal Antonín",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=576341",
-    "title": "Antonín Přidal: Všechny moje hlasy.",
-    "description": "Před devadesáti lety se narodil překladatel, publicista, básník, dramatik, spisovatel a vysokoškolský pedagog Antonín Přidal. Všestranný tvůrce i kritický myslitel, který po mnoho let výrazně ovlivňoval brněnskou kulturní scénu, zanechal výraznou stopu i v rozhlase.",
-    "genre": "",
-    "post_date": "2025-12-07 15:56",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/SBffInni6o/antpvmojhla-7z"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Lapena Shari",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1648555",
-    "title": "slepicka napsal:",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-04-22 16:11",
-    "image_url": "",
-    "download_urls": [
-      "https://www.edisk.cz/stahni/69588/shari-lapena-vsude-sami-lhari-2024-cz-audiokniha-mluvene-slovo-161.57-mb.html/"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Clarke, Arthur Charles",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1650789",
-    "title": "Arthur Charles Clarke - 3001: Poslední vesmírná odysea (2010)",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-04-10 12:12",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/A0BddKThR7/arthur-c-clarke-3001-posledni-vesmirna-odysea-audiokniha-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Gibneyová Patricia",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1711056",
-    "title": "Patricia Gibneyová - Pohřbení andělé (2025)",
-    "description": "Link nalezen. Nejedná se o můj upload. Soubor nemá heslo. Vše se zdá být v pořádku.",
-    "genre": "",
-    "post_date": "2026-03-09 16:45",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/T9YUuwDcHi/pg-pa-2025-lh-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Fajtl František",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=802013",
-    "title": "xxxx napsal:",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-04-11 10:30",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/sA3rg9sBcy/str-7z"
-    ],
-    "password": "Lynx",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Fajtl František",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=802013",
-    "title": "František Fajtl",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-04-11 21:50",
-    "image_url": "",
-    "download_urls": [
-      "https://webshare.cz/#/file/reEa0DWGM1/ff-ban-p-rar"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Strachotová Zuzana",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1675358",
-    "title": "Bažina",
-    "description": "",
-    "genre": "",
-    "post_date": "2026-04-10 19:49",
-    "image_url": "",
-    "download_urls": [
-      "https://www.edisk.cz/stahni/62613/zs-hexbaz1-826.00-mb.html/"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
-    "is_new": true
-  },
-  {
-    "author": "Lovecraft, Howard Phillips",
-    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=586432",
-    "title": "Howard Phillips Lovecraft - Volanie Cthulhu (2025)",
-    "description": "H. P. Lovecraft patrí k autorom, ktorí svojou tvorbou vytvorili osobitý literárny žáner na pomedzí hororu, fantasy a filozofickej sci-fi , označovaný často ako kozmický horor ( cosmic horror ). Tento žáner necharakterizuje vyvolávanie pocitov strachu osvedčenými prostriedkami, či obligátnymi nadprir",
-    "genre": "",
-    "post_date": "2026-01-04 13:02",
-    "image_url": "https://storage.imgbly.com/imgbly/XvJGThhcZi.jpg",
-    "download_urls": [
-      "https://webshare.cz/#/file/GJVEeF3Erq/volanie-cthulhu-howard-phillips-lovecraft-2025-d-mp3"
-    ],
-    "password": "neuvedeno",
-    "problems": "žádné",
-    "reply_problems": "",
-    "forum": "warforum.xyz",
     "is_new": true
   },
   {
@@ -1972,6 +1005,314 @@
     "phase2_pending": false,
     "_pid": "1532291",
     "forum": "corebay.co",
+    "is_new": true
+  },
+  {
+    "author": "Vágner, Josef",
+    "topic_url": "https://war-forum.net/index.php?topic=1759274.0",
+    "title": "Vágner Josef - Kimuri 1997",
+    "description": "Lovecké příběhy a pohádky z Afriky Kniha sestavená z autorových loveckých příhod, vyprávění Afričanů, afrických pohádek a informací o životě africké zvěře. Četba na pokračování z prózy českého přirodovědce, cestovatele a lovce. Hudba Katarína Bielčiková.",
+    "genre": "",
+    "post_date": "2026-05-02 12:18",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/2VagRikZwM/sd4as4da-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Maurois, André",
+    "topic_url": "https://war-forum.net/index.php?topic=1756878.0",
+    "title": "Maurois André - Dvě lásky Filipa Marcenata (2011)",
+    "description": "Dvě lásky Filipa Marcenata, druhý román francouzského prozaika, dramatika a esejisty André Mauroise, je nejčastěji vydávaným románem autorovým. Subtilní psycholog a mistrovský prozaik v něm podal podivuhodně pronikavou analýzu vztahu lidí ve zdánlivě obyčejném manželství. Dvě lásky Filipa Marcenata",
+    "genre": "",
+    "post_date": "2026-05-02 12:16",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/5wz6Y8nLUc/mauadvelfiliarce-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "ZÁHADA ZLATÉ ŠTOLY",
+    "description": "Další z příběhů královského prokurátora Oldřicha z Chlumu se tentokrát odehrává v okolí Prahy. Nevysvětlitelným způsobem se při cestě z královských dolů v Jílovém u Prahy ztratí truhlice plná zlata.",
+    "genre": "Historická detektivka",
+    "post_date": "2026-05-02 07:54",
+    "image_url": "https://www.tympanum.cz/im/coc/420/0/content/566222/web_zahada_zlate_stoly_audible_cover.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/jM8G8yaKkg/vlmvndzhdzltstly02-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Záhada zlaté štoly",
+    "description": "Další z příběhů královského prokurátora Oldřicha z Chlumu se tentokrát odehrává v okolí Prahy. Nevysvětlitelným způsobem se při cestě z královských dolů v Jílovém u Prahy ztratí truhlice plná zlata. Král Přemysl I. Otakar povolá Oldřicha z Chlumu, protože je jasné, že v pozadí musí stát někdo z před",
+    "genre": "",
+    "post_date": "2026-05-02 07:43",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/45/4580/2/500/Audiokniha-Zahada-zlate-stoly-Vlastimil-Vondruska.avif",
+    "download_urls": [
+      "https://webshare.cz/#/file/uPcki0mMzP/vlmvndzhdzltstly2013-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Clavell, James",
+    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
+    "title": "Asijská sága: Další  interpreti",
+    "description": "",
+    "genre": "Literatura světová, Historické romány",
+    "post_date": "2026-05-02 06:23",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/69pV4sEQtT",
+      "https://webshare.cz/#/file/juKCar2zcm",
+      "https://webshare.cz/#/file/BIrN5RNeIX"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Clavell, James",
+    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
+    "title": "Asijská sága #6 - Smršť",
+    "description": "Děj se odehrává v Íránu v roce 1979 a soustředí se na osudy skupiny pilotů vrtulníků firmy Struan's během pádu íránské monarchie a vzestupu Ajatoláha Chomejního. Stejně jako v ostatních Clavellových románech i ve Smršti vystupuje velké množství postav a prolíná se tu mnoho dějových linií.",
+    "genre": "Literatura světová, Historické romány",
+    "post_date": "2026-05-02 06:16",
+    "image_url": "https://i.postimg.cc/0ycHnz5x/Audiokniha-Smrst-James-Clavell.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/arVbaY0xga"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Wiesel, Elie",
+    "topic_url": "https://war-forum.net/index.php?topic=1759227.0",
+    "title": "Wiesel Elie - Svitani 2006 (cz) CRo",
+    "description": "Wieselovo Svitani ma dnes, kdy z izraelske politiky odchazi generace, ktera bojovala v armade proti Anglicanum, zvlastni nalehavost. Pribeh mladeho clena teroristicke zidovske skupiny je tragicky, jeho zivot je poznamenan smrti od sameho pocatku a jeho ucast na cinech nasili je trapenim bez nadeje.",
+    "genre": "",
+    "post_date": "2026-05-01 11:37",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/MWs9v8MMoc/svitni-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Olbracht, Ivan",
+    "topic_url": "https://war-forum.net/index.php?topic=1759226.0",
+    "title": "Olbracht Ivan - Nikola Suhaj loupeznik 1980 (cz)-hra",
+    "description": "Rozhlasové zpracování básnické prózy. Dramatizace Jiří Šotola. Hudba Vladimír Truc. Dramaturg Josef Hlavnička. Jura Šuhaj (Miroslav Masopust), Danilo Jasinko (Josef Vinklář), Ihnat Sopko (Petr Haničinec), Derbak Derbačok (Čestmír Řanda), Adam Chrepta (Martin Štěpánek), Abram Beer (Martin Růžek), Žid",
+    "genre": "",
+    "post_date": "2026-05-01 11:34",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/jvfzvHxT0M/lapko-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Případ masopustních maškar",
+    "description": "Historik a oblíbený spisovatel Vlastimil Vondruška píše mimo jiné čtivé, dramatické a tajuplné detektivní příběhy, které se odehrávají ve středověku. U čtenářů si získaly obrovský ohlas pro svou věrohodnost, atmosféru, rychlý spád děje a napětí. Mnoho z nich spojuje postava vzdělaného a čestného ryt",
+    "genre": "",
+    "post_date": "2026-05-01 09:46",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/9/920/7/500/Audiokniha-Pripad-masopustnich-maskar-Vlastimil-Vondruska.avif",
+    "download_urls": [
+      "https://webshare.cz/#/file/5qayQo9CUa/vndvlmprpmspstmskr-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "JÁCHYMOVŠTÍ DÉMONI",
+    "description": "Letopisy královské komory 18. Mladý rytíř Jiří Adam z Dobronína se stane písařem Královské komory a jeho úkolem je dohlížet na pořádek v Údolí svatého Jáchyma, kde se podařilo nalézt stříbro. Do nové osady se stahují horníci z druhé strany hor a s nimi přicházejí lidé, kteří tu hledají obživu, někte",
+    "genre": "Detektivky",
+    "post_date": "2026-05-01 09:04",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/52/5219/2/500/Audiokniha-Jachymovsti-demoni-Vlastimil-Vondruska.avif",
+    "download_urls": [
+      "https://webshare.cz/#/file/g8eZd8Yx5K/vndvlmljchmdmni-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "PODIVNÁ SVATBA NA LICHNICI",
+    "description": "Série Hříšní lidé Království českého 15. Příběh z detektivního cyklu Hříšní lidé Království českého. Při ústupu českého vojska z Bavorska se dostane v Mühldorfu zadní voj do obležení. V něm bojuje i Oldřich z Chlumu. Rytířům se podaří probojovat na svobodu, ale i když by měli slavit, jejich velitelé",
+    "genre": "",
+    "post_date": "2026-05-01 08:38",
+    "image_url": "https://static.audioteka.com/cz/images/products/vlastimil-vondruska/podivna-svatba-na-lichnici-duze.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/hPwm7PToCB/vlmvndpdvstbnalchci2016-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "KRÁLŮV DLUH",
+    "description": "Píše se rok 1266 a český král Přemysl II. Otakar podporuje slabého císaře Richarda Cornwallského. Za to obdrží úřad, který spravuje císařovo jmění na východ od Rýna, a vzápětí se s jeho tichým souhlasem zmocní Chebska. Tamní měšťané s tím nesouhlasí, ale nemají sílu, aby tomu zabránili.",
+    "genre": "",
+    "post_date": "2026-05-01 08:24",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/52/5234/3/500/Audiokniha-Kraluv-dluh-Vlastimil-Vondruska.avif",
+    "download_urls": [
+      "https://webshare.cz/#/file/sqebgoIQjO/vndvlmlkrlvdlh16-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "VZPOURA GOLIARDŮ",
+    "description": "Píše se rok 1261. Přemysl II. Otakar podpoří v boji o trůn římského krále proti Alfonsi Kastilskému jeho konkurenta Richarda Cornwalského a za to má slíben majestát, propůjčující mu rakouské a štýrské léno. Jenže v diplomacii není nic takové, jak by se mohlo na první pohled zdát. Oldřich z Chlumu od",
+    "genre": "",
+    "post_date": "2026-05-01 08:05",
+    "image_url": "https://atkcdn.audioteka.com/cc/4d/vzpoura-goliardu/27.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/WlrBTFaTN8/vndrvlmlvzpglrd-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Sirotek Michal",
+    "topic_url": "https://war-forum.net/index.php?topic=1756385.0",
+    "title": "Znamení padlých",
+    "description": "Mezi lidmi zuří válka, to nejhorší však teprve přijde Dva národy – jeden nekončící svár. Po deseti letech křehkého míru se rozhořel nový konflikt a nemilosrdně zasáhl do životů všech lidí. Styr a a Lišja se snaží odhalit viníky strašlivých jatek, každý z nich však z jiného důvodu. On chce pomstít sv",
+    "genre": "",
+    "post_date": "2026-04-30 23:25",
+    "image_url": "https://atkcdn.audioteka.com/cc/24/znameni-padlych/4.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/N7mv8JcUWx"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Sue, Eugéne",
+    "topic_url": "https://war-forum.net/index.php?topic=1759182.0",
+    "title": "Sue Eugéne - Bitva u Navarina 2004 (cz)",
+    "description": "Pribeh namornika za velke historicke bitvy dne 20. rijna 1827 v zalivu u reckeho pristavu Navarino (dnesni Pylos). Povidku francouzskeho spisovatele z roku 1842 z vlastniho prekladu pro rozhlas pravil Petr Turek. Ucinkuje Pavel Soukup. V roce 2004 natocil reziser Vlado Rusko. Povidka francouzskeho s",
+    "genre": "",
+    "post_date": "2026-04-30 12:30",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/z0l3E7LFse/bitva1842-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Epstein, Marek",
+    "topic_url": "https://war-forum.net/index.php?topic=1754576.0",
+    "title": "Epstein Marek - Ocucanej konec 2017 (cz) CRo",
+    "description": "Povídkový soubor úspěšného filmového a televizního scénáristy (Ve stínu, Roming, Václav, Clona…). Dějově bohaté a čtivé povídky spojuje postava hlavního hrdiny, kterého autor sleduje od dětství až do Kristových let. Pro rozhlas připravila Nikol Patíková. Dramaturgie Alena Blažejovská.",
+    "genre": "",
+    "post_date": "2026-04-30 12:25",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/ypjdHfBZT0/marek-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Frennstedt, Tina",
+    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
+    "title": "Cliftonova kronika #4 - Příliš odvážné přání",
+    "description": "Na začátku čtvrtého dílu Cliftonovy kroniky se setkáváme s Harrym Cliftonem a jeho ženou Emmou, kteří spěchají do nemocnice, aby se dozvěděli o osudu jejich syna Sebastiana. Ten se stal účastníkem vážné autonehody, která si vyžádala i oběť na životě. Ale kdo zemřel? Sebastian, nebo jeho nejlepší pří",
+    "genre": "Literatura světová, Pro ženy, Historické romány",
+    "post_date": "2026-04-30 09:21",
+    "image_url": "https://i.postimg.cc/BZmYLybR/Audiokniha-Prilis-odvazne-prani-Jeffrey-Archer.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/qlZ8oyvgBd"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Frennstedt, Tina",
+    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
+    "title": "Cliftonova kronika #3 - Přísně střežené tajemství",
+    "description": "Napínavá rodinná sága z pera brilantního vypravěče Jeffreyho Archera pokračuje. Píše se rok 1945 a Sněmovna lordů hlasuje o tom, kdo zdědí rodinné bohatství Barringtonů. A rozhodující hlas lorda kancléře zamíchá kartami jak Harryho Cliftona, tak Gilese Barringtona. Harry se vrací do Ameriky, aby zde",
+    "genre": "Literatura světová, Pro ženy, Historické romány",
+    "post_date": "2026-04-30 09:18",
+    "image_url": "https://i.postimg.cc/yxDNTtHL/Audiokniha-Prisne-strezene-tajemstvi-Jeffrey-Archer.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/2TgBkCDTbw"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
     "is_new": true
   },
   {
@@ -2136,6 +1477,295 @@
     "is_new": true
   },
   {
+    "author": "Walliams, David",
+    "topic_url": "https://war-forum.net/index.php?topic=1759525.0",
+    "title": "Mezi tiárou a orlicí II",
+    "description": "Ve druhém díle sledujeme mocenský vzestup knížete Vratislava II, jeho střety s ambiciozním polským knížetem i papežem až ke přelomové korunovaci Dramatický příběh z druhé poloviny 11. století vypráví na základě dochovaných historických pramenů o dlouhém a pohnutém životě krále Vratislava I. Ve druhé",
+    "genre": "",
+    "post_date": "2026-04-29 11:52",
+    "image_url": "https://static.audioteka.com/cz/images/products/vlastimil-vondruska/mezi-tiarou-a-orlici-ii-duze.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/7k50oBkRJI/vlmvndmzitiruaorlii-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Frennstedt, Tina",
+    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
+    "title": "Cliftonova kronika #2 - Otcovy hříchy",
+    "description": "New York, 1939. Harry Clifton, nyní pod novou identitou jako Tom Bradshaw, je zatčen za vraždu prvního stupně. Když mu špičkový manhattanský právník Sefton Jelks nabídne zdarma své služby, Harry, který je na mizině, nemá jinou možnost než jeho nabídku a rady přijmout. Jenže poté co je Harry shledán",
+    "genre": "Literatura světová, Pro ženy, Historické romány",
+    "post_date": "2026-04-29 07:11",
+    "image_url": "https://i.postimg.cc/rwg4v3nH/Audiokniha-Otcovy-hrichy-Jeffrey-Archer.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/rG4KRmwHBF"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Frennstedt, Tina",
+    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
+    "title": "Cliftonova kronika #1 - Jen čas ukáže",
+    "description": "KDO JE OTCEM HARRYHO CLIFTONA? OBYČEJNÝ DOKAŘ NEBO NÁMOŘNÍ MAGNÁT? Velkolepý životní příběh Harryho Cliftona začíná v roce 1920 mrazivými slovy: „Tvrdili mi, že můj otec padl ve válce.“ Uplyne však ještě dalších dvacet let, než Harry zjistí, jak jeho otec skutečně zemřel, což ho přivede k otázce, kd",
+    "genre": "Literatura světová, Pro ženy, Historické romány",
+    "post_date": "2026-04-29 07:08",
+    "image_url": "https://i.postimg.cc/655msJYv/Audiokniha-Jen-cas-ukaze-Jeffrey-Archer.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/GSkHe6Am3X"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Foster, Alan Dean",
+    "topic_url": "https://war-forum.net/index.php?topic=1757402.0",
+    "title": "Alan Dean Foster -",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-04-28 18:00",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/v9RqVNIGpl/adfvc-mp3"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Frennstedt, Tina",
+    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
+    "title": "Devítiocasá kočka (2022)",
+    "description": "Smutné, veselé i dojemné příběhy s často překvapivým koncem... Bestsellerový spisovatel Jeffrey Archer strávil dva roky v pěti různých věznicích a za tu dobu sesbíral nápady na řadu originálních povídek s rozličnými hrdiny. • Seznámíte se s „Mužem, který vyloupil vlastní poštu\", stejně jako s předse",
+    "genre": "",
+    "post_date": "2026-04-27 07:22",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/111/11154/2/500/Audiokniha-Devitiocasa-kocka-Jeffrey-Archer.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/QmwIt1xw8C/archjffdvtoctakcka2022-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Frennstedt, Tina",
+    "topic_url": "https://war-forum.net/index.php?topic=1759465.0",
+    "title": "William Warwick #3 - Přimhouřit oko",
+    "description": "V tomto novém díle je William pověřen vyšetřováním korupce přímo v řadách policie. On a jeho tým se pustí do sledování seržanta Jerryho Summerse, detektiva, který si zjevně žije vysoce nad poměry svého policejního platu. Vše se však značně zkomplikuje, když se jedna z Williamových kolegyní do podezř",
+    "genre": "",
+    "post_date": "2026-04-26 21:23",
+    "image_url": "https://atkcdn.audioteka.com/cc/31/primhourit-oko/5.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/VGGGQF5Kjw"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Lapena Shari",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1648555",
+    "title": "slepicka napsal:",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-04-22 16:11",
+    "image_url": "",
+    "download_urls": [
+      "https://www.edisk.cz/stahni/69588/shari-lapena-vsude-sami-lhari-2024-cz-audiokniha-mluvene-slovo-161.57-mb.html/"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Bellová Bianca - Jezero",
+    "topic_url": "https://war-forum.net/index.php?topic=1530355.0",
+    "title": "Bellová Bianca - Nevšední portrét indiánského mladíka 2025 (cz)",
+    "description": "Příběh o tajemném obrazu a několika zmizelých ženách Povídka Nevšední portrét indiánského mladíka vyšla v antologii Po stopách zločinů",
+    "genre": "",
+    "post_date": "2026-04-22 13:35",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/zJpogcyqw0/esej-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Fajtl František",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=802013",
+    "title": "František Fajtl",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-04-11 21:50",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/reEa0DWGM1/ff-ban-p-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Fajtl František",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=802013",
+    "title": "xxxx napsal:",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-04-11 10:30",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/sA3rg9sBcy/str-7z"
+    ],
+    "password": "Lynx",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Strachotová Zuzana",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1675358",
+    "title": "Bažina",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-04-10 19:49",
+    "image_url": "",
+    "download_urls": [
+      "https://www.edisk.cz/stahni/62613/zs-hexbaz1-826.00-mb.html/"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Clarke, Arthur Charles",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1650789",
+    "title": "Arthur Charles Clarke - 3001: Poslední vesmírná odysea (2010)",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-04-10 12:12",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/A0BddKThR7/arthur-c-clarke-3001-posledni-vesmirna-odysea-audiokniha-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Kleist, Heinrich von",
+    "topic_url": "https://war-forum.net/index.php?topic=1758163.0",
+    "title": "Kleist, Heinrich von - Kačenka z Heillbronu 1984 (cz)",
+    "description": "Zdánlivě pohádkový příběh mísí žánry a na rytířské mravy se dívá s ironií. Divadelní hra Heinricha von Kleista byla poprvé uvedena v roce 1810. Tehdejší obecenstvo překvapila neobvyklým mísením žánrů, ironickým pohledem na rytířské mravy a kritikou společenské nerovnosti, které byly součástí tohoto",
+    "genre": "",
+    "post_date": "2026-04-06 11:07",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/J3YfVguyRC/pecena-kacka-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Bellová Bianca - Jezero",
+    "topic_url": "https://war-forum.net/index.php?topic=1530355.0",
+    "title": "Bellova Bianca - Spinava zalezitost 2019 (cz)",
+    "description": "Povidku jako pripominku utoku na Sindzar v anglictine napsala a pro rozhlas do cestiny prelozila autorka. Pripravila Klara Fleyberkova.",
+    "genre": "",
+    "post_date": "2026-04-05 18:14",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/vdcRIdDo8N/trapas-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Foster, Alan Dean",
+    "topic_url": "https://war-forum.net/index.php?topic=1757402.0",
+    "title": "Vetřelci",
+    "description": "Poté, co prožila drsné setkání s prakticky neporazitelným vetřelcem, je Ellen Ripley v záchranném modulu ztracena někde ve vesmíru. Po nalezení záchranného modulu se dozví, že na planetě LV-426, kde její posádka našla mimozemskou loď, vznikla kolonie. Nikdo jí nevěří, že tam číhá smrtelné nebezpečí.",
+    "genre": "",
+    "post_date": "2026-03-20 11:29",
+    "image_url": "https://media.themoviedb.org/t/p/w440_and_h660_face/ykxmb0S0RVCWxv7V90jI5W6taIF.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/LBsVkjQeNL/fsrdnalnvtrci-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Gibneyová Patricia",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1711056",
+    "title": "Patricia Gibneyová - Pohřbení andělé (2025)",
+    "description": "Link nalezen. Nejedná se o můj upload. Soubor nemá heslo. Vše se zdá být v pořádku.",
+    "genre": "",
+    "post_date": "2026-03-09 16:45",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/T9YUuwDcHi/pg-pa-2025-lh-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Maurois, André",
+    "topic_url": "https://war-forum.net/index.php?topic=1756878.0",
+    "title": "Maurois Andre - Mlceni plukovnika Brambla (2004)",
+    "description": "S humorem a ironickym nadhledem, s vynikajicim smyslem pro psychologii hrdinu, stavi proti sobe anglickou a francouzskou narodni mentalitu ilustrovanou na jednotlivych prislusnicich dustojnickeho sboru, kteri uprostred valecne vravy konfrontuji sve nazory na valku, politiku a spolecnost.",
+    "genre": "",
+    "post_date": "2026-03-07 08:27",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/Ynt9KqqIVA/grule-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
     "topic_id": "1314974",
     "author": "[06-03-26][KF/WS] [PTTRN03] Various - RItuals [2026] [WEB] [FLAC]",
     "topic_url": "https://www.corebay.co/06-03-26KF-WS-PTTRN03-Various-RItuals-2026-WEB-FLAC-t1314974",
@@ -2181,6 +1811,74 @@
     "phase2_pending": false,
     "_pid": null,
     "forum": "corebay.co",
+    "is_new": true
+  },
+  {
+    "author": "Clavell, James",
+    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
+    "title": "Asijská sága #5 - Vznešený dům",
+    "description": "Panský (vznešený) dům je také přezdívka firmy Struan's, obchodní společnosti, která hraje ústřední roli ve většině románů Asijské ságy. V roce 1963 se tchaj-pan Ian Dunross pokouší zachránit rodinnou firmu (Struan's) z obtížné finanční situace, v které ji zanechal jeho předchůdce. Proto se snaží uza",
+    "genre": "Literatura světová, Historické romány",
+    "post_date": "2026-03-03 07:19",
+    "image_url": "https://i.postimg.cc/nz5Hnkgx/Vzneseny-dum.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/QgPvFoY0Ug"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Clavell, James",
+    "topic_url": "https://war-forum.net/index.php?topic=1731130.0",
+    "title": "Asijská sága #3 - Gaidžin",
+    "description": "Příběh se odehrává 20 let po událostech popsaných v Tchaj-panovi. Zachycuje dobrodružství Malcolma Struana, dědice obchodní společnosti Struan's, v Japonsku roku 1862. V ději je do značné hloubky vysvětlena politická situace v Japonsku a obtíže, kterým byli „západní“ cizinci nuceni čelit. Příběh byl",
+    "genre": "Literatura světová, Historické romány",
+    "post_date": "2026-03-03 07:17",
+    "image_url": "https://i.postimg.cc/N0qmj8hN/Gaidzin.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/QE6lxPwF5A"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Sirotek Michal",
+    "topic_url": "https://war-forum.net/index.php?topic=1756385.0",
+    "title": "Michal Sirotek - Zelený muž",
+    "description": "Před rokem přišla během tragického požáru o matku. Teď se Nikol vrací z Prahy zpět do rodného města v srdci Šumavy. Minulost ale ještě neřekla své poslední slovo a znovu otevírá staré rány. Nikol zjišťuje, že se v okolí dějí znepokojivé věci, které vyvolávají mnoho otázek. Kdo je tajemný cizinec, je",
+    "genre": "",
+    "post_date": "2026-02-25 15:37",
+    "image_url": "https://d2emjept89nv7b.cloudfront.net/covers/161/16137/1/500/Audiokniha-Zeleny-muz-Michal-Sirotek.avif",
+    "download_urls": [
+      "https://fastshare.cloud/33393340/simichzemu.zip"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Werfel Franz",
+    "topic_url": "https://war-forum.net/index.php?topic=1510591.0",
+    "title": "Franz Werfel - Čtyřicet dnů",
+    "description": "Devítidílný seriál na motivy stejnojmenného románu. Přeložil Hanuš Karlach. Dramatizace Jan Vedral. Scénická hudba Petr Mandel. Štěpán,jeho syn (Libor Bouček), Avagjan, vychovatel (Ivan Řezáč), Müdür (Svatopluk Skopal), Aga Bereket (Josef Somr), Lékárník Grigor (Ilja Racek), Doktor Altuni (Petr Hani",
+    "genre": "",
+    "post_date": "2026-02-24 13:33",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/NO4A2r4LNV/40-40-40-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
     "is_new": true
   },
   {
@@ -2309,6 +2007,23 @@
     "is_new": true
   },
   {
+    "author": "Klostermann Karel",
+    "topic_url": "https://war-forum.net/index.php?topic=1316933.0",
+    "title": "Klostermann Karel - Bily samum 2014",
+    "description": "Samum je horký suchý vítr afrických pouští. Šumavský spisovatel Karel Klostermann si termín vypůjčil pro označení silné sněhové bouře, v níž se cestou ze školy ztratila skupina dětí.",
+    "genre": "",
+    "post_date": "2026-02-06 12:33",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/asvyX3bAsJ/klosbisa4-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
     "topic_id": "1309491",
     "author": "[05-02-26][KF/WS] [VFS001] Vite Fait Soundsystem - 5 Years Vite Fait [2025] [Vinyl-24bit-48khz] [FLAC]",
     "topic_url": "https://www.corebay.co/05-02-26KF-WS-VFS001-Vite-Fait-Soundsystem-5-Years-Vite-Fait-2025-Vinyl-24bit-48khz-FLAC-t1309491",
@@ -2380,6 +2095,23 @@
     "phase2_pending": false,
     "_pid": null,
     "forum": "corebay.co",
+    "is_new": true
+  },
+  {
+    "author": "King Stephen / + EN",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1212103",
+    "title": "xxxx napsal:",
+    "description": "",
+    "genre": "",
+    "post_date": "2026-02-02 17:58",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/group/bInzApq9Eg/"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
     "is_new": true
   },
   {
@@ -2575,6 +2307,23 @@
     "is_new": true
   },
   {
+    "author": "Hajaja",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
+    "title": "Zuzana Pospíšilová: Vánoční pohádky.",
+    "description": "Poslechněte si neuvěřitelné příběhy o tom, jak se ztratily Vánoce nebo jak vodník Pentlička zachraňoval své kapříky. Ale také třeba vyprávění o namyšlených vánočních cukrátkách a hádavých dárcích nebo o jedné zvědavé Hvězdičce, která spadla z nebe.",
+    "genre": "",
+    "post_date": "2026-01-30 16:01",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/5rJlncsl0B/zuzposvpoh-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
     "topic_id": "1308688",
     "author": "[29-01-26][KF/WS] [MTRHS01] Various - Mantra Hs 01 [2025] [WEB] [FLAC]",
     "topic_url": "https://www.corebay.co/29-01-26KF-WS-MTRHS01-Various-Mantra-Hs-01-2025-WEB-FLAC-t1308688",
@@ -2645,6 +2394,257 @@
     "phase2_pending": false,
     "_pid": null,
     "forum": "corebay.co",
+    "is_new": true
+  },
+  {
+    "author": "Epstein, Marek",
+    "topic_url": "https://war-forum.net/index.php?topic=1754576.0",
+    "title": "Epstein, Marek - Na věky věků 2018",
+    "description": "Po úspěchu, který sklidil před třemi lety s hrou Pescho, se scenárista Marek Epstein vrací nejen k rozhlasové dramatice, ale také k žánru dystopie a budování budoucího či paralelního světa, jenž v sobě ale nese palčivé otázky naší právě prožívané současnosti. Hru o hledání zapomenutého citu ve světě",
+    "genre": "",
+    "post_date": "2026-01-19 18:05",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/UhOeKQs7xl/naveky-rar"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "John Gwynne",
+    "topic_url": "https://war-forum.net/index.php?topic=1724507.0",
+    "title": "Věrní a padlí #3 - Zkáza",
+    "description": "Na Země vyhnanců se snesla pohroma v podobě války a chaosu. Záludná královna Rhin dobyla západ a nejvyšší král Nathair získal magický kotel, nejmocnější ze Sedmi pokladů, k jejichž shromáždění ho nabádá prohnaný Calidus s hordou děsivých démonů ze Zásvětí. Plánuje totiž s jejich pomocí přivést vládc",
+    "genre": "Literatura světová, Fantasy",
+    "post_date": "2026-01-19 06:46",
+    "image_url": "https://i.postimg.cc/NfPLXLk4/Audiokniha-Zkaza.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/RXuDkOqcJq"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Corey James S.A. - Leviatan se probouzi",
+    "topic_url": "https://war-forum.net/index.php?topic=1695394.0",
+    "title": "Expanze #4 - O poklad Ciboly",
+    "description": "Brány se otevřely a lidstvo znovu zachvátila kolonizační horečka… Po událostech s mimozemskou protomolekulou a otevření prstencových bran mají lidé na dosah tisíc neobydlených světů. Do vesmírného pohraničí proudí osadníci hledající nový život – nebo prchající před tím starým. Na planetě Ilus, přezd",
+    "genre": "",
+    "post_date": "2026-01-17 21:23",
+    "image_url": "https://atkcdn.audioteka.com/cc/9b/o-poklad-ciboly/4.jpg?w=300&auto=format",
+    "download_urls": [
+      "https://webshare.cz/#/file/LXyxt1JA3z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Hajaja",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
+    "title": "David Košťák - Kryštof z papíru.",
+    "description": "Už se vám někdy stalo, že se vám nechtělo vylézt z postele? To byste si rozuměli s Kryštofem.",
+    "genre": "",
+    "post_date": "2026-01-17 15:57",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/aQJ1OhRMFA/davkokryzpap-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Dickens Charles",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=735366",
+    "title": "Charles Dickens - Zvony novoroční",
+    "description": "Tobiášek Ťapka pracuje jako poslíček. Není už zrovna nejmladší a tím pádem nerychlejší, ale o to je svědomitější. Na své zakázky čekává na schodech kostela. Rytmus i atmosféru jeho častých a košatých úvah tak určují zvony.",
+    "genre": "",
+    "post_date": "2026-01-11 12:09",
+    "image_url": "https://i.postimg.cc/bwnRsNx7/cdzn.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/flc80QUZ2K/cdzn-zip"
+    ],
+    "password": "wfm.xyz",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Hajaja",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
+    "title": "Melita Denková: Pohádky z růží.",
+    "description": "Představte si, jak by to bylo krásné, kdybychom rozuměli tomu, co si povídají květiny. Třeba si navzájem vyprávějí pohádky. Tři příběhy s vůní růžových květů.",
+    "genre": "",
+    "post_date": "2026-01-07 15:54",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/9l466j9cgj/meldenpohzr-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Lovecraft, Howard Phillips",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=586432",
+    "title": "Howard Phillips Lovecraft - Volanie Cthulhu (2025)",
+    "description": "H. P. Lovecraft patrí k autorom, ktorí svojou tvorbou vytvorili osobitý literárny žáner na pomedzí hororu, fantasy a filozofickej sci-fi , označovaný často ako kozmický horor ( cosmic horror ). Tento žáner necharakterizuje vyvolávanie pocitov strachu osvedčenými prostriedkami, či obligátnymi nadprir",
+    "genre": "",
+    "post_date": "2026-01-04 13:02",
+    "image_url": "https://storage.imgbly.com/imgbly/XvJGThhcZi.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/GJVEeF3Erq/volanie-cthulhu-howard-phillips-lovecraft-2025-d-mp3"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Hašek, Jaroslav",
+    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
+    "title": "Jaroslav Hašek - Pan Kobkán vdává dceru",
+    "description": ".................................................................................................. Vladimír Ráž, Vlastimil Hašek, Zora Jandová, Jiřina Bohdalová, František Filipovský, Jiří Lír, Stella Zázvorková...",
+    "genre": "Literatura česká, Humor, povídky",
+    "post_date": "2026-01-01 06:19",
+    "image_url": "https://i.postimg.cc/hv8KdgLy/Pan-Kobkan-vdava-dceru.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/9dDTDkz2dK",
+      "https://webshare.cz/#/file/XyLSHX34bi",
+      "https://webshare.cz/#/file/qDyXzMBtdo",
+      "https://webshare.cz/#/file/kSxpQ029Ht",
+      "https://webshare.cz/#/file/75Jlmwww67"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Hašek, Jaroslav",
+    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
+    "title": "Jaroslav Hašek - Výběr z díla",
+    "description": "Miroslav Táborský, Ladislav Frej, Martin Stránský, Jožka Wannerová, Vojta Merten, Jára Kohout, Ivan Lupták, Jakub Albrecht, Vojtěch Vondráček ............................................................................................",
+    "genre": "Literatura česká, Humor, povídky",
+    "post_date": "2025-12-31 07:13",
+    "image_url": "https://i.postimg.cc/V6s1JQST/Vyber-z-dila-svetove-prosluleho-spisovate.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/aL9f4VmSvF",
+      "https://webshare.cz/#/file/hFiJ3vXZTr",
+      "https://webshare.cz/#/file/w0jo0noVSo",
+      "https://webshare.cz/#/file/OfQUPatBfX",
+      "https://webshare.cz/#/file/Sb04pnGl5Y",
+      "https://webshare.cz/#/file/LccoCjxXLD"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Hašek, Jaroslav",
+    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
+    "title": "Bohužel  chybí poslední kapitola...Tak, pokud někdo vlastní???",
+    "description": "",
+    "genre": "",
+    "post_date": "2025-12-21 16:03",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/tEH2on0uXY"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Hajaja",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
+    "title": "Hana Lehečková: Příběh slavné rytířky Leopoldy z Blanice u Bavorova.",
+    "description": "Leopolda je obyčejné děvče ze statku. Stará se o zvířata a domácnost, jenže krmit slepice a prát prádlo ji tak docela nebaví. Sní totiž o tom, že bude bojovat v důležitých bitvách a válkách a zachraňovat zakleté prince a princezny. Chce ve svém životě jediné – stát se rytířkou! Poslechněte si původn",
+    "genre": "",
+    "post_date": "2025-12-21 16:00",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/fdILXd6Kcp/hanlehpslarytlezbluba-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Hašek, Jaroslav",
+    "topic_url": "https://war-forum.net/index.php?topic=1752966.0",
+    "title": "Jaroslav Hašek - Osudy dobrého vojáka Švejka",
+    "description": "Rudolf Hrušínský, Martin Dejdar, Pavel Zedníček, Arnošt Goldflam Bohužel  chybí poslední kapitola...Tak, pokud někdo vlastní??? -",
+    "genre": "Romány, Literatura česká, Humor",
+    "post_date": "2025-12-21 06:52",
+    "image_url": "https://i.postimg.cc/J49Dq61L/Svejk-kaiser.jpg",
+    "download_urls": [
+      "https://webshare.cz/#/file/AuBPQC81HM",
+      "https://webshare.cz/#/file/xBfxUiVxVx",
+      "https://webshare.cz/#/file/LcUbIP13Pf",
+      "https://webshare.cz/#/file/qhemqFP8HB",
+      "https://webshare.cz/#/file/LfUY8gvy0c"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "war-forum.net",
+    "is_new": true
+  },
+  {
+    "author": "Přidal Antonín",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=576341",
+    "title": "Antonín Přidal: Všechny moje hlasy.",
+    "description": "Před devadesáti lety se narodil překladatel, publicista, básník, dramatik, spisovatel a vysokoškolský pedagog Antonín Přidal. Všestranný tvůrce i kritický myslitel, který po mnoho let výrazně ovlivňoval brněnskou kulturní scénu, zanechal výraznou stopu i v rozhlase.",
+    "genre": "",
+    "post_date": "2025-12-07 15:56",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/SBffInni6o/antpvmojhla-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
+    "is_new": true
+  },
+  {
+    "author": "Hajaja",
+    "topic_url": "http://www.warforum.xyz/viewtopic.php?t=1753651",
+    "title": "Matěj Samec: Zvláštních věcí plný svět.",
+    "description": "Jak vypadá ostrov, na který ještě nikdy nikdo nevkročil?  Jak by vypadal vesmír, kdybychom ho mohli vidět z dálky? Proč někdy lidé pláčou, i když se usmívají?",
+    "genre": "",
+    "post_date": "2025-12-05 16:44",
+    "image_url": "",
+    "download_urls": [
+      "https://webshare.cz/#/file/AXoaYCXt8g/matsamzvlvplnsv-7z"
+    ],
+    "password": "neuvedeno",
+    "problems": "žádné",
+    "reply_problems": "",
+    "forum": "warforum.xyz",
     "is_new": true
   }
 ]
